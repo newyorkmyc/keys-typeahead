@@ -19,7 +19,8 @@
         "doc",
         "code",
         "infra",
-        "tool"
+        "tool",
+        "question"
       ]
     }
   ],
