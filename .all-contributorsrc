@@ -33,7 +33,8 @@
         "code",
         "doc",
         "bug",
-        "data"
+        "data",
+        "question"
       ]
     }
   ],
