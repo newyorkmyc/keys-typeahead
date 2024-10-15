@@ -1,6 +1,6 @@
 # Fungal Keys Typahead
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Aggregating links to fungal keys for the NYMS website.
@@ -70,6 +70,7 @@ details
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Elaniobro"><img src="https://avatars.githubusercontent.com/u/710847?v=4?s=100" width="100px;" alt="Elan Trybuch"/><br /><sub><b>Elan Trybuch</b></sub></a><br /><a href="https://github.com/newyorkmyc/keys-typeahead/commits?author=Elaniobro" title="Documentation">📖</a> <a href="https://github.com/newyorkmyc/keys-typeahead/commits?author=Elaniobro" title="Code">💻</a> <a href="#infra-Elaniobro" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#tool-Elaniobro" title="Tools">🔧</a> <a href="#question-Elaniobro" title="Answering Questions">💬</a> <a href="#mentoring-Elaniobro" title="Mentoring">🧑‍🏫</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mrozanoff/mrozanoff.github.io"><img src="https://avatars.githubusercontent.com/u/48360019?v=4?s=100" width="100px;" alt="Matthew Rozanoff"/><br /><sub><b>Matthew Rozanoff</b></sub></a><br /><a href="https://github.com/newyorkmyc/keys-typeahead/commits?author=mrozanoff" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

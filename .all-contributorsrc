@@ -23,6 +23,15 @@
         "question",
         "mentoring"
       ]
+    },
+    {
+      "login": "mrozanoff",
+      "name": "Matthew Rozanoff",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48360019?v=4",
+      "profile": "https://github.com/mrozanoff/mrozanoff.github.io",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
