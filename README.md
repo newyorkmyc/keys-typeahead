@@ -1,4 +1,7 @@
 # Fungal Keys Typahead
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Aggregating links to fungal keys for the NYMS website.
 
@@ -12,7 +15,7 @@ for notes on deploying the project on a live system.
 
 ### Prerequisites
 
-Requirements for the software and other tools to build, test and push 
+Requirements for the software and other tools to build, test and push
 - [node.js](https://nodejs.org/en/download/package-manager)
 
 ### Installing
@@ -51,10 +54,6 @@ Add additional notes to deploy this on a live system
   - Python 3+ for converting data into JSON
   - HTML / CSS / JavaScript for frontend
 
-## Authors
-
-  - **Matthew Rozanoff**
-  - **Elan Trybuch**
 
 ## License
 
@@ -62,3 +61,27 @@ This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
 Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
 details
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Elaniobro"><img src="https://avatars.githubusercontent.com/u/710847?v=4?s=100" width="100px;" alt="Elan Trybuch"/><br /><sub><b>Elan Trybuch</b></sub></a><br /><a href="https://github.com/newyorkmyc/keys-typeahead/commits?author=Elaniobro" title="Documentation">📖</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->

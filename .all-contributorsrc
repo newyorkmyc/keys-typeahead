@@ -1,0 +1,25 @@
+{
+  "projectName": "keys-typeahead",
+  "projectOwner": "newyorkmyc",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "Elaniobro",
+      "name": "Elan Trybuch",
+      "avatar_url": "https://avatars.githubusercontent.com/u/710847?v=4",
+      "profile": "https://github.com/Elaniobro",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": false
+}
