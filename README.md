@@ -69,7 +69,7 @@ details
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Elaniobro"><img src="https://avatars.githubusercontent.com/u/710847?v=4?s=100" width="100px;" alt="Elan Trybuch"/><br /><sub><b>Elan Trybuch</b></sub></a><br /><a href="https://github.com/newyorkmyc/keys-typeahead/commits?author=Elaniobro" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Elaniobro"><img src="https://avatars.githubusercontent.com/u/710847?v=4?s=100" width="100px;" alt="Elan Trybuch"/><br /><sub><b>Elan Trybuch</b></sub></a><br /><a href="https://github.com/newyorkmyc/keys-typeahead/commits?author=Elaniobro" title="Documentation">📖</a> <a href="https://github.com/newyorkmyc/keys-typeahead/commits?author=Elaniobro" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
