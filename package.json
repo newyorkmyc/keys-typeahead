@@ -1,0 +1,41 @@
+{
+  "name": "keys-typeahead",
+  "version": "1.0.0",
+  "description": "Simple typeahead to find keys",
+  "main": "index.js",
+  "scripts": {
+    "commit": "commit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky && husky install",
+    "pre-commit": "lint-staged",
+    "commitlint": "commitlint --edit"
+  },
+  "keywords": [
+    "typeahead",
+    "keys",
+    "mycology"
+  ],
+  "author": {
+    "name": "Matthew Rozanoff",
+    "email": "",
+    "url": ""
+  },
+  "contributors": [
+    {
+      "name": "Elan Trybuch",
+      "email": "elan@trybuch.com",
+      "url": "https://elan.trybuch.com"
+    }
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/newyorkmyc/keys-typeahead"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.10"
+  }
+}
