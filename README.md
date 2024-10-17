@@ -17,6 +17,7 @@ for notes on deploying the project on a live system.
 
 Requirements for the software and other tools to build, test and push
 - [node.js](https://nodejs.org/en/download/package-manager)
+- [http-server](https://www.npmjs.com/package/http-server)
 
 ### Installing
 
@@ -27,10 +28,9 @@ environment running
 
 2. Navigate to the folder location in the command line and start a node server with:
 ```
-npm init -y
+npm install --global http-server
 ```
-
-You should see a UI pop up that looks like the image below:
+3. Visit your browser at http://localhost:8080/ to see the UI
 
 ### Current UI Design
 
@@ -52,7 +52,7 @@ Add additional notes to deploy this on a live system
 
   - Google Sheets for initial data collection
   - Python 3+ for converting data into JSON
-  - HTML / CSS / JavaScript for frontend
+  - HTML / CSS / JavaScript
 
 
 ## License
