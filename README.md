@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Aggregating links to fungal keys for the NYMS website.
+A ggregating links to fungal keys for the NYMS website.
 
 To contribute any fungal keys please enter them [here](https://docs.google.com/spreadsheets/d/1kmjDvNiSI5lf99F5wE-nCSKwRLOtvO-rwj_xwGERzfg/edit?usp=sharing)
 
