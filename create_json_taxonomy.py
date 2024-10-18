@@ -9,7 +9,8 @@ import time
 
 # Constants
 API_URL_BASE = "https://api.inaturalist.org/v1/taxa"
-TAXON_ID = 47170  # ID for Fungi in iNaturalist 48340
+FUNGI_TAXON_ID = 47170
+MYXO_TAXON_ID = 47685
 RATE_LIMIT_DELAY = 1  # Delay between API calls to avoid exceeding rate limits
 
 # Helper function to fetch taxa from the iNaturalist API
@@ -86,11 +87,22 @@ def build_taxonomic_hierarchy(parent_id, rank):
 
 
 
-key_list = []
+fungi_key_list = []
 taxon_df = df.loc[df['inat_taxon'] == 'Fungi']
 
 for _, row in taxon_df.iterrows():
-        key_list.append({
+        fungi_key_list.append({
+            "title": row['title'],
+            "locale": row['locale'],
+            "authors": [author.strip() for author in row['authors'].split(';')],
+            "url": row['url']  # Use the corresponding URL
+        })
+
+myxo_key_list = []
+taxon_df = df.loc[df['inat_taxon'] == 'Mycetozoa']
+
+for _, row in taxon_df.iterrows():
+        myxo_key_list.append({
             "title": row['title'],
             "locale": row['locale'],
             "authors": [author.strip() for author in row['authors'].split(';')],
@@ -98,17 +110,50 @@ for _, row in taxon_df.iterrows():
         })
 
 
+fungi_data = {
+    "life": {
+        "latinName": "Life",
+        "commonName": "Life",
+        "taxon_id": 0,
+        "keys": [],
+        "kingdom": [
+            {
+                "latinName": "Fungi",
+                "commonName": "Fungi",
+                "taxon_id": 47170,
+                "keys": fungi_key_list,
+                "phylum": build_taxonomic_hierarchy(FUNGI_TAXON_ID, "phylum")
+            },
+            {
+               "latinName": "Protozoa",
+                "commonName": "Protozoans",
+                "taxon_id": 47686,
+                "keys": [],
+                "phylum": [
+                    {            
+                        "latinName": "Mycetozoa",
+                        "commonName": "Slime Molds",
+                        "taxon_id": 47685,
+                        "keys": myxo_key_list,
+                        "class": build_taxonomic_hierarchy(MYXO_TAXON_ID, "order")
+                    }
+                ]
+            }
+        ]
+    }    
+}
+
 # Build the JSON structure for kingdom Fungi WORKING ORIGINAL #### THIS NEEDS TO BE FIXED ASAP
 # You need to put a taxon ID, and then the next lowest taxon with it, so phylum for fungi
-fungi_data = {
-    "kingdom": {
-        "latinName": taxon['name'],
-        "commonName": taxon['preferred_common_name'] if 'preferred_common_name' in taxon else None,
-        "taxon_id": taxon['id'],
-        "keys": key_list
-        "phylum": build_taxonomic_hierarchy(TAXON_ID, "phylum")
-    }
-}
+# fungi_data = { # OG
+#     "kingdom": {
+#         "latinName": taxon['name'],
+#         "commonName": taxon['preferred_common_name'] if 'preferred_common_name' in taxon else None,
+#         "taxon_id": taxon['id'],
+#         "keys": key_list
+#         "phylum": build_taxonomic_hierarchy(TAXON_ID, "phylum")
+#     }
+# }
 
 # TAXON_ID = 118249# for testing only
 
@@ -129,7 +174,7 @@ fungi_data = {
 
 
 # Write the JSON data to a file
-with open('fungi_taxonomyTESTING.json', 'w') as json_file:
+with open('fungi_taxonomy.json', 'w') as json_file:
     json.dump(fungi_data, json_file, indent=4)
 
 print("Fungi taxonomy JSON file created successfully.")
