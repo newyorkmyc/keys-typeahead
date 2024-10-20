@@ -196,7 +196,7 @@ button:disabled {
         async function loadJSON() {
             try {
                 // Fetch the JSON file (replace 'data.json' with your file path)
-                const response = await fetch('./fungi_taxonomyTESTING.json');
+                const response = await fetch('./fungi_taxonomy.json');
 
                 // Check if the fetch was successful
                 if (!response.ok) {
@@ -254,7 +254,7 @@ button:disabled {
         // Recursive search function
         function searchRecursive(obj, searchTerm, results) {
 
-            if (obj == null) return; // Check if obj is null
+            if (obj === null) return; // Check if obj is null
  
             // If the object has "keys", search within them
             if (obj.keys && obj.keys.length > 0) {
