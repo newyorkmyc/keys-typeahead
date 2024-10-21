@@ -205,7 +205,6 @@ button:disabled {
 
                 // Parse the JSON file into a JavaScript object
                 data = await response.json();
-                console.log(data);
 
                 // Call performSearch to display all results on page load
                 performSearch();
@@ -252,12 +251,11 @@ button:disabled {
             }
         }
 
-
-
         // Recursive search function
         function searchRecursive(obj, searchTerm, results) {
-            if (obj == null) return; // Check if obj is null
 
+            if (obj === null) return; // Check if obj is null
+ 
             // If the object has "keys", search within them
             if (obj.keys && obj.keys.length > 0) {
                 obj.keys.forEach(keyItem => {
@@ -278,7 +276,7 @@ button:disabled {
             }
 
             // Recursively search nested properties
-            ['phylum', 'class', 'order', 'family', 'genus'].forEach(taxon => {
+            ['kingdom', 'phylum', 'class', 'order', 'family', 'genus'].forEach(taxon => {
                 if (Array.isArray(obj[taxon])) {
                     obj[taxon].forEach(subItem => searchRecursive(subItem, searchTerm, results));
                 }
@@ -335,7 +333,7 @@ function performSearch() {
     const results = [];
 
     // Search through the data using the recursive function
-    searchRecursive(data.kingdom, searchTerm, results);
+    searchRecursive(data.life, searchTerm, results);
 
     // Display the search results
     displayResults(results, searchTerm);
@@ -407,14 +405,14 @@ function updateDynamicLink(results) {
                 }
 
                 // Recursively collect keys from nested taxons
-                ['phylum', 'class', 'order', 'family', 'genus'].forEach(taxon => {
+                ['kingdom', 'phylum', 'class', 'order', 'family', 'genus'].forEach(taxon => {
                     if (Array.isArray(obj[taxon])) {
                         obj[taxon].forEach(collectKeys);
                     }
                 });
             }
 
-            collectKeys(data.kingdom); // Start from the kingdom level
+            collectKeys(data.life); // Start from the kingdom level
 
             // Select a random key
             if (keys.length > 0) {
