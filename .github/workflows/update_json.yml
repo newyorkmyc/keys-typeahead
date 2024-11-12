@@ -4,7 +4,7 @@ name: Update Fungi Taxonomy JSON
 on:
   push:
     branches:
-      - 12-cicd-pipelines
+      - main
   schedule:
     - cron: '0 0 * * *'  # Runs daily at midnight; adjust as needed
 
