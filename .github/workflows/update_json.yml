@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight; adjust as needed
+    - cron: '0 0 1 * *'
 
 jobs:
   update-json:
@@ -43,6 +43,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           if [ -n "$(git status --porcelain fungi_taxonomy.json)" ]; then
             git add fungi_taxonomy.json
-            git commit -m "Update fungi_taxonomy.json"
+            git commit -m "ci: Update fungi_taxonomy.json"
             git push
           fi
