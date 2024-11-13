@@ -1,0 +1,48 @@
+name: Update Fungi Taxonomy JSON
+
+# Run this workflow on a push to main or on a schedule
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Give writing permission
+
+    steps:
+      # Checkout the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      # Install dependencies if your script requires any
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Ensure a requirements file exists if needed
+
+      # Run the Python script
+      - name: Run taxonomy script
+        run: python create_json_taxonomy.py
+
+      # Commit and push changes if fungi_taxonomy.json was modified
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if [ -n "$(git status --porcelain fungi_taxonomy.json)" ]; then
+            git add fungi_taxonomy.json
+            git commit -m "ci: Update fungi_taxonomy.json"
+            git push
+          fi
