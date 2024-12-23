@@ -11,7 +11,7 @@ name: CI/CD Pipeline - Deploy
 on:
   push:
     branches:
-      - 'actios-simple-deploy'
+      - 'actions-simple-deploy'
 
 # Define global variable scoped to entire workflow
 env:
