@@ -1,17 +1,12 @@
 name: CI/CD Pipeline - Deploy
 
-# on:
-#   pull_request:
-#     types:
-#       - closed
-#     branches:
-#       # Pull Request Closed event for branches matching 'main'
-#       - 'main'
-
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
-      - 'actions-simple-deploy'
+      # Pull Request Closed event for branches matching 'main'
+      - 'main'
 
 # Define global variable scoped to entire workflow
 env:
@@ -27,10 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # # Test point to create file
-      # - name: run cmds
-      #   run: |
-      #     echo slime > slime.txt
       - name: Set up SCP 🔑
         run: |
           mkdir -v -m 700 $HOME/.ssh
