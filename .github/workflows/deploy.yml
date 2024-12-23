@@ -34,9 +34,9 @@ jobs:
       - name: Set up SCP 🔑
         run: |
           mkdir -v -m 700 $HOME/.ssh
-          ssh-keyscan -H ${{ NYMS_HOST }} > $HOME/.ssh/known_hosts
-          echo "${{ SSH_KEY }}" > $HOME/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.NYMS_HOST }} > $HOME/.ssh/known_hosts
+          echo "${{ secrets.SSH_KEY }}" > $HOME/.ssh/id_rsa
           chmod 400 $HOME/.ssh/id_rsa
       - name: Upload to server ⬆️
         run: |
-          scp -i {{$HOME/.ssh/id_rsa}} ./fungi_taxonomy.json ./index.html ${{ SSH_USER }}@${{ NYMS_HOST }}:${{ NYMS_TARGET }}
+          scp -i {{$HOME/.ssh/id_rsa}} ./fungi_taxonomy.json ./index.html ${{ secrets.SSH_USER }}@${{ secrets.NYMS_HOST }}:${{ secrets.NYMS_TARGET }}
