@@ -1,0 +1,33 @@
+name: CI/CD Pipeline - Deploy
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      # Pull Request Closed event for branches matching 'main'
+      - 'main'
+
+# Define global variable scoped to entire workflow
+env:
+  REPO_NAME: ${{ github.event.repository.name }}
+  SSH_USER: ${{ secrets.SSH_USER }}
+  SSH_KEY: ${{ secrets.SSH_KEY }}
+  NYMS_HOST: ${{ secrets.NYMS_HOST }}
+  NYMS_TARGET: ${{ secrets.NYMS_TARGET }}
+
+jobs:
+  Simple-Deploy:
+    name: Simple Deploy 🚀
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up SCP 🔑
+        run: |
+          mkdir -v -m 700 $HOME/.ssh
+          ssh-keyscan -H ${{ secrets.NYMS_HOST }} > $HOME/.ssh/known_hosts
+          echo "${{ secrets.SSH_KEY }}" > $HOME/.ssh/id_rsa
+          chmod 400 $HOME/.ssh/id_rsa
+      - name: Upload to server ⬆️
+        run: |
+          scp -i {{$HOME/.ssh/id_rsa}} ./fungi_taxonomy.json ./index.html ${{ secrets.SSH_USER }}@${{ secrets.NYMS_HOST }}:${{ secrets.NYMS_TARGET }}
