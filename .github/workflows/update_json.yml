@@ -1,12 +1,12 @@
-name: Update Fungi Taxonomy JSON
+name: Build JSON Taxonomy
 
 # Run this workflow on a push to main or on a schedule
 on:
-  push:
+  push: # This triggers the workflow on any push to any branch
     branches:
-      - main
-  schedule:
-    - cron: '0 0 1 * *'
+      - actions-json-update
+  # schedule:
+  #   - cron: '0 0 1 * *'
 
 jobs:
   update-json:
@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checkout the repository code
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Set up Python
       - name: Set up Python
@@ -29,18 +29,26 @@ jobs:
       # Install dependencies if your script requires any
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Ensure a requirements file exists if needed
+          echo '..pytyon install..'
+          #python -m pip install --upgrade pip
+          #pip install -r requirements.txt  # Ensure a requirements file exists if needed
 
       # Run the Python script
       - name: Run taxonomy script
-        run: python create_json_taxonomy.py
+        run: |
+          echo '...create json...'
+          #python create_json_taxonomy.py
 
       # Commit and push changes if fungi_taxonomy.json was modified
-      - name: Commit and push changes
+      - name: Configure Git
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push changes
+        env:
+          TOKEN: ${{ secrets.NYMS_PAT }}
+        run: |
           if [ -n "$(git status --porcelain fungi_taxonomy.json)" ]; then
             git add fungi_taxonomy.json
             git commit -m "ci: Update fungi_taxonomy.json"
