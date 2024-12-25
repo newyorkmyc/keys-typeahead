@@ -54,8 +54,8 @@ jobs:
         env:
           TOKEN: ${{ secrets.NYMS_PAT }}
         run: |
-          if [ -n "$(git status --porcelain fungi_taxonomy.json)" ]; then
+          if [ -n "$(git status --porcelain .)" ]; then
             git add .
-            git commit -m "ci: Update fungi_taxonomy.json"
+            git commit -m "ci: Update"
             git push
           fi
