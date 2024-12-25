@@ -78,28 +78,15 @@ button:disabled {
 
         /* Button styling */
         button {
-            background-color: #007bff; /* Primary blue color */
-            color: white; /* White text */
-            padding: 10px 20px; /* Padding inside the button */
             font-size: 16px; /* Button font size */
             border: none; /* Remove default border */
             border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor on hover */
+            width: 100%;
             transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0); /* Subtle shadow for depth */
         }
 
-        /* Button hover effects */
-        button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-        }
-
-        button:active {
-            background-color: #004494; /* Even darker blue when clicked */
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow when pressed */
-            transform: translateY(2px); /* Slight push down effect */
-        }
+   
 
         #centerContainer {
             display: flex; /* Flexbox for alignment */
@@ -148,7 +135,60 @@ button:disabled {
             background-color: #ccc;
             margin: 10px 0;
         }
+        .title a{
+            text-decoration: none;
+            font-size: 36px;
+            font-weight: bold;
+            color: #000;
+        }
+        .locale {
+            border-top: 3px;
+            border-bottom: 3px;
+            border-right: 0;
+            border-left: 0;
+            border-color: #000;
+            border-style: solid;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        .label {
+            font-size: 10px;
+            font-weight: 200;
+        }
+        .meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .taxon {
+            
+        }
+        .authors {
+            
+        }
+        #dynamicButtonsContainer {
+            background-color: #D1CFC2;
+        }
+        #dynamicButtonsContainer button {
+            margin:0px;
+            padding:8px;
+            background-color: transparent;
+        }
+        /* Button hover effects */
+        #dynamicButtonsContainer button:hover {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
 
+        #dynamicButtonsContainer button:active {
+            background-color: #004494; /* Even darker blue when clicked */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow when pressed */
+            transform: translateY(2px); /* Slight push down effect */
+        }
+        .external-title{
+            text-align: left;
+            font-weight: bold;
+            width: 100%;
+            margin: 8px 0 8px 8px;
+        }
     </style>
 </head>
 
@@ -158,6 +198,11 @@ button:disabled {
     <div class="container">
         <!-- Locale list on the left -->
         <div>
+            <div id="dynamicButtonsContainer">
+                <div class="external-title">External Resources:</div>
+                <button id="dynamicLinkButton1">Dynamic Button 1</button>
+                <button id="dynamicLinkButton2">Dynamic Button 2</button>
+            </div>
             <p>Most Common Locales</p>
             <div id="localeList">
                 <!-- Locale items will be dynamically added here -->
@@ -179,10 +224,7 @@ button:disabled {
         <div>
             <button id="randomKeyButton" onclick="exploreRandomKey()">... or Explore Random Key</button>
             <div class="separator-line"></div>
-            <div id="dynamicButtonsContainer">
-                <button id="dynamicLinkButton1">Dynamic Button 1</button>
-                <button id="dynamicLinkButton2">Dynamic Button 2</button>
-            </div>
+           
         </div>
     </div>
 </body>
@@ -242,9 +284,12 @@ button:disabled {
 
                     // Construct the result HTML with highlighted matches
                     resultElement.innerHTML = `
-                        <p><a href="${result.url}" target="_blank">${highlightedTitle}</a> - ${highlightedLocale}</p>
-                        <p><strong>Taxon:</strong> ${highlightedLatinName} - ${highlightedCommonName ? highlightedCommonName : 'N/A'}</p>
-                        <p><strong>Authors:</strong> ${highlightedAuthors}</p>
+                        <div class='locale'>${highlightedLocale}</div>
+                        <h2 class='title'><a href="${result.url}" target="_blank">${highlightedTitle}</a></h2>
+                        <div class="meta">
+                        <div class='taxon'><div class="label">Taxon:</div> ${highlightedLatinName} - ${highlightedCommonName ? highlightedCommonName : 'N/A'}</div>
+                        <div class='authors'><div class="label">Authors:</div> ${highlightedAuthors}</div>
+                        </div>
                     `;
                     resultsDiv.appendChild(resultElement);
                 });
