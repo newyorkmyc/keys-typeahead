@@ -1,24 +1,23 @@
 name: Update Fungi Taxonomy JSON
 
-# Run this workflow on a push to main or on a schedule
+# Run this workflow on a schedule
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 0 1 * *'
+    - cron: '0 0 1 * *' # Run on the 1st of every month at midnight UTC
 
 jobs:
   update-json:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write # Give writing permission
+      contents: write # Grant write permissions for repository files
 
     steps:
       # Checkout the repository code
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.NYMS_PAT }}
 
       # Set up Python
       - name: Set up Python
@@ -38,11 +37,13 @@ jobs:
 
       # Commit and push changes if fungi_taxonomy.json was modified
       - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.NYMS_PAT }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           if [ -n "$(git status --porcelain fungi_taxonomy.json)" ]; then
             git add fungi_taxonomy.json
             git commit -m "ci: Update fungi_taxonomy.json"
-            git push
+            git push https://${{ secrets.NYMS_PAT }}@github.com/newyorkmyc/keys-typeahead.git main
           fi
