@@ -4,7 +4,7 @@ name: Build JSON Taxonomy
 on:
   push: # This triggers the workflow on any push to any branch
     branches:
-      - actions-json-update
+      - [actions-json-update, main]
   # schedule:
   #   - cron: '0 0 1 * *'
 
