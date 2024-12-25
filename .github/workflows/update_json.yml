@@ -48,7 +48,7 @@ jobs:
 
       - name: create file
         run: |
-          echo 'Hello' < world.txt
+          echo 'Hello' > world.txt
 
       - name: Commit and push changes
         env:
