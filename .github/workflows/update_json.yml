@@ -46,12 +46,16 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: create file
+        run: |
+          echo 'Hello' < world.txt
+
       - name: Commit and push changes
         env:
           TOKEN: ${{ secrets.NYMS_PAT }}
         run: |
           if [ -n "$(git status --porcelain fungi_taxonomy.json)" ]; then
-            git add fungi_taxonomy.json
+            git add .
             git commit -m "ci: Update fungi_taxonomy.json"
             git push
           fi
