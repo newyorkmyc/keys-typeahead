@@ -1,451 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typeahead Search</title>
+    <title>Keys Typeahead Search</title>
     <style>
         /* Basic styling for the body */
+
+
+
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center horizontally */
-            justify-content: center; /* Center vertically */
-            height: 100vh; /* Full height */
-            margin: 0; /* Remove default margin */
-            background-color: #f4f4f4; /* Light background color */
+            font-family: 'Poppins', sans-serif;
+            color: #000;
         }
 
-        /* Title styling */
-        h1 {
-            color: #333; /* Dark color for the title */
-            margin-bottom: 20px; /* Space below the title */
-        }
-
-        /* Styling for the container to manage layout */
         .container {
-            display: flex; /* Flexbox for layout */
-            justify-content: space-between; /* Space out children evenly */
-            align-items: flex-start; /* Align items to the top */
-            width: 100%; /* Full width of the viewport */
-            max-width: 1200px; /* Max width for large screens */
-            padding: 0 20px; /* Padding on the sides */
+            text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Styling for the input field */
-        input[type="text"] {
-            padding: 10px; /* Padding for better usability */
-            border: 2px solid #007bff; /* Blue border */
-            border-radius: 5px; /* Rounded corners */
-            font-size: 16px; /* Font size */
-            flex-grow: 1; /* Allow input to grow and take available space */
+        nav {
+            padding-bottom: 5vh;
+            margin-top: 0;
+            color: #000;
+            padding: 0 16px;
         }
 
-        /* Styling for the results container */
-        #resultsContainer {
-            max-height: 400px; /* Set a maximum height for the scrollable area */
-            overflow-y: auto; /* Enable vertical scrolling */
-            border: 1px solid #ccc; /* Add a border */
-            border-radius: 5px; /* Rounded corners */
-            background-color: #fff; /* White background */
-            padding: 10px; /* Padding inside the container */
-            width: 500px; /* Width for the results container */
-            min-height: 400px; /* Minimum height to maintain space */
-        }
-        /* Disabled button styling */
-button:disabled {
-    background-color: #e0e0e0; /* Light grey background */
-    color: #a0a0a0; /* Darker grey text */
-    cursor: not-allowed; /* Change cursor to indicate unavailability */
-    box-shadow: none; /* Remove shadow for disabled state */
-}
-
-        /* Individual result item styling */
-        .search-result {
-            margin: 10px 0; /* Spacing between results */
-            padding: 10px; /* Padding for each result */
-            border: 1px solid #e0e0e0; /* Light border */
-            background-color: #fafafa; /* Slightly darker background for results */
-            border-radius: 5px; /* Rounded corners */
+        nav .social-media {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(6, 60px);
+            margin:0;
+            padding: 0;
         }
 
-        /* Bold the matched characters */
-        .highlight {
-            font-weight: bold; /* Make matched text bold */
-            color: #007bff; /* Blue color for highlighted text */
+        nav .social-media--item {
+            display: inline;
         }
 
-        /* Button styling */
-        button {
-            background-color: #007bff; /* Primary blue color */
-            color: white; /* White text */
-            padding: 10px 20px; /* Padding inside the button */
-            font-size: 16px; /* Button font size */
-            border: none; /* Remove default border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor on hover */
-            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        nav .social-media--link {
+            font-size: 24px;
+            color: #000;
         }
-
-        /* Button hover effects */
-        button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        nav .social-media--inat:hover { color: #74ac00 }
+        nav .social-media--facebook:hover { color: #3b5998; }
+        nav .social-media--instagram:hover { color: #bc2a8d; }
+        nav .social-media--github:hover { color: #999; }
+        nav .social-media--bluesky:hover { color: #08f; }
+        nav .social-media--threads:hover { color: #999; }
+        .copyright {
+            align-content: center;
+            margin: 16px 0 0 0;
         }
-
-        button:active {
-            background-color: #004494; /* Even darker blue when clicked */
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow when pressed */
-            transform: translateY(2px); /* Slight push down effect */
-        }
-
-        #centerContainer {
-            display: flex; /* Flexbox for alignment */
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center elements horizontally */
-            position: relative; /* For absolute positioning of results */
-        }
-
-        /* Search container styling */
-        #searchContainer {
-            display: flex; /* Flexbox for alignment */
-            flex-direction: row; /* Arrange items in a row */
-            align-items: center; /* Center items vertically */
-            width: 500px; /* Set the width to match results container */
-            padding: 20px;
-        }
-
-        /* Clear button styling */
-        #clearButton {
-            margin-left: 10px; /* Space to the left of the button */
-            padding: 10px 20px; /* Consistent padding */
-        }
-
-        /* Locale list styling */
-        #localeList {
-            max-height: 400px; /* Set a fixed height */
-            width: 200px; /* Fixed width for the locale list */
-            overflow-y: auto; /* Enable vertical scrolling */
-            border: 1px solid #ccc; /* Border for the locale list */
-            border-radius: 5px; /* Rounded corners */
-            padding: 10px; /* Padding inside the locale list */
-            background-color: #fff; /* White background */
-        }
-
-        /* Dynamic buttons and line separator */
-        #dynamicButtonsContainer {
+        header {
             display: flex;
-            flex-direction: column;
+            gap: 0 16px;
+            padding: 0 16px;
             align-items: center;
-            margin-top: 20px;
+            position: sticky;
+            top: 0;
+            height: 80px;
+            background-color: #fff;
+            z-index: 100;
         }
 
-        .separator-line {
+        header .logo {
+            flex: .25;
+        }
+
+        header .title {
+            flex: 2;
+            text-align: center;
+        }
+
+        header .logo {
+            height: 80px;
+
+        }
+
+        .search--container {
+            display: flex;
+            flex: 3;
+        }
+
+        .search {
+            position: relative;
+            color: #aaa;
+            font-size: 16px;
+            display: inline-block;
+            flex: 1
+        }
+
+        .search input {
+            width: 250px;
+            height: 32px;
+            background: #fcfcfc;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+            text-indent: 32px;
             width: 100%;
-            height: 1px;
-            background-color: #ccc;
-            margin: 10px 0;
         }
 
+        .search .fa-search {
+            position: absolute;
+            top: 10px;
+            left: auto;
+            right: 10px;
+        }
+
+        main {
+            display: flex;
+        }
+
+        section {
+            flex: 3;
+            padding-top: 16px
+        }
+
+        article {
+            padding-bottom: 16px;
+            margin: 0 16px 32px;
+            /* outline: 1px solid #ccc; */
+            border-radius: 3px;
+            padding: 4px;
+        }
+
+        article .key-locale {
+            border-top: 3px solid #999;
+            border-bottom: 3px solid #999;
+            padding: 4px;
+            margin: 0;
+        }
+
+        article .key-title {
+            font-size: 24px;
+        }
+
+        article .key-title--link {
+            color: #000;
+            text-decoration: none;
+        }
+
+        article .key-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        article .key-taxon {}
+
+        article .key-taxon--label {
+            font-size: 12px;
+            color: #9999;
+        }
+
+        article .key-authors {}
+
+        aside {
+            margin: 16px;
+            flex: 1;
+            height: 100Vh;
+            position: sticky;
+            overflow: auto;
+            top: 96px;
+        }
+
+        aside .menu-external {
+            background-color: #f4deba;
+        }
+
+        aside .menu-locale {
+            background-color: #e2f5be;
+            margin-top: 32px;
+        }
+
+        aside .menu-locale--list {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside .menu-locale--item {
+            margin: 4px 0;
+        }
+
+        aside .menu {
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        footer {
+            padding-bottom: 5vh;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Search For Fungus Key</h1>
 
-    <div class="container">
-        <!-- Locale list on the left -->
-        <div>
-            <p>Most Common Locales</p>
-            <div id="localeList">
+    <header>
+        <img class="logo" src="https://www.newyorkmyc.org/wp-content/uploads/2023/05/logo-NYMS-circle-svg.svg#316" />
+        <h1 class="title">Search For Fungus Key</h1>
+        <div class="search--container">
+            <div class="search">
+                <a class="search--button" href="#"><span class="fa fa-search"></span></a>
+                <input class="search--input" placeholder="Search for Title, Author, Locale, or Taxon...">
+            </div>
+        </div>
+        <!-- <div>
+                        <input type="text" class="input--search" id="searchInput"
+                            placeholder="Search for Title, Author, Locale, or Taxon..." oninput="performSearch()" />
+                        <button id="clearButton" onclick="clearSelection()">Clear Selection</button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div> -->
+    </header>
+
+    <main>
+        <aside>
+            <section class="menu menu-external" id="dynamicButtonsContainer">
+                <h3 class="menu--title">External Resources:</h3>
+                <a id="dynamicLinkButton1">Dynamic Button 1 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a id="dynamicLinkButton2">Dynamic Button 2 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </section>
+            <section class="menu menu-locale" id="localeList">
+                <h3 class="menu--title">Most Common Locales</h3>
+                <ul class="menu-locale--list">
+
+                </ul>
                 <!-- Locale items will be dynamically added here -->
+            </section>
+        </aside>
+        <section class="search-results-container">
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-media">
+                <li class="social-media--item">
+                    <a class="social-media--link social-media--inat"
+                        href="//www.inaturalist.org/projects/fungi-of-nyc-new-york-mycological-society"
+                        target="_blank"><i class="fa-solid fa-dove"></i></a>
+                </li>
+                <li class="social-media--item">
+                    <a class="social-media--link social-media--facebook" href="//www.instagram.com/newyorkmyc" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li class="social-media--item">
+                    <a class="social-media--link social-media--instagram" href="//www.instagram.com/newyorkmyc" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li class="social-media--item">
+                    <a class="social-media--link social-media--bluesky" href="//bsky.app/profile/newyorkmyc.org" target="_blank"><i
+                            class="fa-brands fa-bluesky"></i></a>
+                </li>
+                <li class="social-media--item">
+                    <a class="social-media--link social-media--github" href="//www.github.com/newyorkmyc" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+                </li>
+                <li class="social-media--item">
+                    <a class="social-media--link social-media--threads" href="//www.threads.net/@newyorkmyc" target="_blank"><i
+                            class="fa-brands fa-threads"></i></a>
+                </li>
+            </ul>
+            <div class="copyright">&copy;
+                <script type="text/javascript"> document.write(new Date().getFullYear())</script>
             </div>
-        </div>
+        </nav>
+    </footer>
 
-        <!-- Search bar and results in the center -->
-        <div id="centerContainer">
-            <div id="searchContainer">
-                <input type="text" id="searchInput" placeholder="Search for Title, Author, Locale, or Taxon..." oninput="performSearch()" />
-                <button id="clearButton" onclick="clearSelection()">Clear Selection</button>
-            </div>
-            <div id="resultsContainer">
-                <div id="results"></div>
-            </div>
-        </div>
-
-        <!-- Explore Random Key button and dynamic buttons on the right -->
-        <div>
-            <button id="randomKeyButton" onclick="exploreRandomKey()">... or Explore Random Key</button>
-            <div class="separator-line"></div>
-            <div id="dynamicButtonsContainer">
-                <button id="dynamicLinkButton1">Dynamic Button 1</button>
-                <button id="dynamicLinkButton2">Dynamic Button 2</button>
-            </div>
-        </div>
-    </div>
 </body>
+
 </html>
-   
 
-    <script>
-        let data = {}
 
-        // Function to load the JSON file and store it in a variable
-        async function loadJSON() {
-            try {
-                // Fetch the JSON file (replace 'data.json' with your file path)
-                const response = await fetch('./fungi_taxonomy.json');
+<script>
+    let data = {}
+    const searchInput = document.querySelector('.search--input');
 
-                // Check if the fetch was successful
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+    // Function to load the JSON file and store it in a variable
+    async function loadJSON() {
+        try {
+            // Fetch the JSON file (replace 'data.json' with your file path)
+            const response = await fetch('./fungi_taxonomy.json');
 
-                // Parse the JSON file into a JavaScript object
-                data = await response.json();
-
-                // Call performSearch to display all results on page load
-                performSearch();
-            } catch (error) {
-                console.error('Error loading the JSON file:', error);
+            // Check if the fetch was successful
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+
+            // Parse the JSON file into a JavaScript object
+            data = await response.json();
+
+            // Call performSearch to display all results on page load
+            performSearch();
+        } catch (error) {
+            console.error('Error loading the JSON file:', error);
         }
+    }
 
-        // Call the function when the page loads
-        document.addEventListener('DOMContentLoaded', loadJSON);
+    // Call the function when the page loads
+    document.addEventListener('DOMContentLoaded', loadJSON);
 
-        function highlightMatch(text, searchTerm) {
-            if (!searchTerm) return text;  // If no search term is provided, return the original text
-            const regex = new RegExp(`(${searchTerm})`, 'gi');  // Create a case-insensitive regex
-            return text.replace(regex, '<strong>$1</strong>');   // Replace the match with bolded text
-        }
+    function highlightMatch(text, searchTerm) {
+        if (!searchTerm) return text;  // If no search term is provided, return the original text
+        const regex = new RegExp(`(${searchTerm})`, 'gi');  // Create a case-insensitive regex
+        return text.replace(regex, '<strong>$1</strong>');   // Replace the match with bolded text
+    }
 
-        function displayResults(results, searchTerm) {
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = '';  // Clear previous results
+    function displayResults(results, searchTerm) {
+        const resultsDiv = document.querySelector('.search-results-container');
+        resultsDiv.innerHTML = '';  // Clear previous results
 
-            if (results.length === 0) {
-                resultsDiv.innerHTML = '<p>No results found.</p>';
-            } else {
-                results.forEach(result => {
-                    const resultElement = document.createElement('div');
-                    resultElement.classList.add('search-result');
+        if (results.length === 0) {
+            resultsDiv.innerHTML = '<p>No results found.</p>';
+        } else {
+            results.forEach(result => {
+                const resultElement = document.createElement('article');
+                resultElement.classList.add('search-result');
 
-                    // Highlight search term in the title, latinName, and commonName
-                    const highlightedTitle = highlightMatch(result.title, searchTerm);
-                    const highlightedLocale = highlightMatch(result.locale, searchTerm);
-                    const highlightedAuthors = highlightMatch(result.authors.join(' | '), searchTerm);
-                    const highlightedLatinName = highlightMatch(result.latinName || '', searchTerm);
-                    const highlightedCommonName = highlightMatch(result.commonName || '', searchTerm);
+                // Highlight search term in the title, latinName, and commonName
+                const highlightedTitle = highlightMatch(result.title, searchTerm);
+                const highlightedLocale = highlightMatch(result.locale, searchTerm);
+                const highlightedAuthors = highlightMatch(result.authors.join(' | '), searchTerm);
+                const highlightedLatinName = highlightMatch(result.latinName || '', searchTerm);
+                const highlightedCommonName = highlightMatch(result.commonName || '', searchTerm);
 
-                    // Construct the result HTML with highlighted matches
-                    resultElement.innerHTML = `
-                        <p><a href="${result.url}" target="_blank">${highlightedTitle}</a> - ${highlightedLocale}</p>
-                        <p><strong>Taxon:</strong> ${highlightedLatinName} - ${highlightedCommonName ? highlightedCommonName : 'N/A'}</p>
-                        <p><strong>Authors:</strong> ${highlightedAuthors}</p>
+                // Construct the result HTML with highlighted matches
+                resultElement.innerHTML = `
+                        <h5 class='key-locale'>${highlightedLocale}</h5>
+                        <h2 class='key-title'><a class='key-title--link' href='${result.url}' target='_blank'>${highlightedTitle}</a></h2>
+                        <div class='key-meta'>
+                        <div class='key-taxon'>
+                            <div class='key-taxon--label'>Taxon:</div>
+                                ${highlightedLatinName} - ${highlightedCommonName ? highlightedCommonName : 'N/A'}
+                            </div>
+                            <div class='key-taxon--authors'>
+                                <div class='key-taxon--label'>Authors:</div>
+                                ${highlightedAuthors}
+                            </div>
+                        </div>
                     `;
-                    resultsDiv.appendChild(resultElement);
-                });
-            }
+                resultsDiv.appendChild(resultElement);
+            });
         }
+    }
 
-        // Recursive search function
-        function searchRecursive(obj, searchTerm, results) {
+    // Recursive search function
+    function searchRecursive(obj, searchTerm, results) {
 
-            if (obj === null) return; // Check if obj is null
- 
-            // If the object has "keys", search within them
-            if (obj.keys && obj.keys.length > 0) {
-                obj.keys.forEach(keyItem => {
-                    // Add obj.latinName and obj.commonName to the keyItem dictionary
-                    keyItem.latinName = obj.latinName || null;
-                    keyItem.commonName = obj.commonName || null;
-                    keyItem.taxon_id = obj.taxon_id || null;
+        if (obj === null) return; // Check if obj is null
 
-                    if (!searchTerm || keyItem.title.toLowerCase().includes(searchTerm.toLowerCase()) 
-                                    || keyItem.authors.toString().toLowerCase().includes(searchTerm.toLowerCase())
-                                    || keyItem.locale.toLowerCase().includes(searchTerm.toLowerCase())
-                                    || (obj.latinName && obj.latinName.toLowerCase().includes(searchTerm.toLowerCase())) 
-                                    || (obj.commonName && obj.commonName.toLowerCase().includes(searchTerm.toLowerCase()))
-                                    ) {
-                        results.push(keyItem);
-                    }
-                });
-            }
+        // If the object has "keys", search within them
+        if (obj.keys && obj.keys.length > 0) {
+            obj.keys.forEach(keyItem => {
+                // Add obj.latinName and obj.commonName to the keyItem dictionary
+                keyItem.latinName = obj.latinName || null;
+                keyItem.commonName = obj.commonName || null;
+                keyItem.taxon_id = obj.taxon_id || null;
 
-            // Recursively search nested properties
-            ['kingdom', 'phylum', 'class', 'order', 'family', 'genus'].forEach(taxon => {
-                if (Array.isArray(obj[taxon])) {
-                    obj[taxon].forEach(subItem => searchRecursive(subItem, searchTerm, results));
+                if (!searchTerm || keyItem.title.toLowerCase().includes(searchTerm.toLowerCase())
+                    || keyItem.authors.toString().toLowerCase().includes(searchTerm.toLowerCase())
+                    || keyItem.locale.toLowerCase().includes(searchTerm.toLowerCase())
+                    || (obj.latinName && obj.latinName.toLowerCase().includes(searchTerm.toLowerCase()))
+                    || (obj.commonName && obj.commonName.toLowerCase().includes(searchTerm.toLowerCase()))
+                ) {
+                    results.push(keyItem);
                 }
             });
         }
 
-        // Function to count occurrences of each locale
-function countLocales(results) {
-    const localeCounts = {};
-    
-    results.forEach(result => {
-        const locale = result.locale || 'Unknown';
-        if (localeCounts[locale]) {
-            localeCounts[locale]++;
+        // Recursively search nested properties
+        ['kingdom', 'phylum', 'class', 'order', 'family', 'genus'].forEach(taxon => {
+            if (Array.isArray(obj[taxon])) {
+                obj[taxon].forEach(subItem => searchRecursive(subItem, searchTerm, results));
+            }
+        });
+    }
+
+    // Function to count occurrences of each locale
+    function countLocales(results) {
+        const localeCounts = {};
+
+        results.forEach(result => {
+            const locale = result.locale || 'Unknown';
+            if (localeCounts[locale]) {
+                localeCounts[locale]++;
+            } else {
+                localeCounts[locale] = 1;
+            }
+        });
+
+        return localeCounts;
+    }
+
+    // Function to display locales with their count
+    function displayLocales(localeCounts) {
+        const localeList = document.querySelector('.menu-locale--list');
+        localeList.innerHTML = ''; // Clear previous locale list
+
+        Object.keys(localeCounts).forEach(locale => {
+            const count = localeCounts[locale];
+
+            const localeItem = document.createElement('li');
+            localeItem.classList.add('menu-locale--item')
+
+            localeItem.innerHTML = `[ ${count} ] - ${locale}`;
+
+            // Add click event to populate search field and trigger search
+            localeItem.addEventListener('click', (e) => {
+                searchInput.value = locale;
+                performSearch(); // Trigger search with the locale
+            });
+
+            localeList.appendChild(localeItem);
+        });
+    }
+
+    // Modify performSearch to also update the locale list
+    function performSearch() {
+        const searchTerm = document.querySelector('.search--input').value.trim();
+        const results = [];
+
+        // Search through the data using the recursive function
+        searchRecursive(data.life, searchTerm, results);
+
+        // Display the search results
+        displayResults(results, searchTerm);
+
+        // Update the dynamic link based on the top result
+        updateDynamicLink(results);
+
+        // Count locales and display them
+        const localeCounts = countLocales(results);
+        displayLocales(localeCounts);
+    }
+
+    // Function to update two dynamic link buttons based on the top result's taxon_id
+    function updateDynamicLink(results) {
+        const dynamicLinkButton1 = document.getElementById('dynamicLinkButton1');
+        const dynamicLinkButton2 = document.getElementById('dynamicLinkButton2');
+
+        if (results.length == 0) {
+            // Disable both buttons if no results
+            dynamicLinkButton1.disabled = true;
+            dynamicLinkButton2.disabled = true;
         } else {
-            localeCounts[locale] = 1;
-        }
-    });
+            dynamicLinkButton1.disabled = false;
+            dynamicLinkButton2.disabled = false;
 
-    return localeCounts;
-}
+            const topResultTaxonId = results[0].taxon_id;  // Get the taxon_id from the top result
+            const topResultLatinName = results[0].latinName;
 
-// Function to display locales with their count
-function displayLocales(localeCounts) {
-    const localeListDiv = document.getElementById('localeList');
-    localeListDiv.innerHTML = ''; // Clear previous locale list
+            // Update text for both buttons
+            dynamicLinkButton1.textContent = `View ${topResultLatinName} iNaturalist Observations`;
+            dynamicLinkButton2.textContent = `View ${topResultLatinName} iNaturalist Observations with DNA Barcode ITS`;
 
-    Object.keys(localeCounts).forEach(locale => {
-        const count = localeCounts[locale];
-        
-        const localeItem = document.createElement('div');
-        localeItem.style.cursor = 'pointer';
-        localeItem.style.padding = '5px';
-        localeItem.style.marginBottom = '5px';
-        localeItem.style.border = '1px solid #e0e0e0';
-        localeItem.style.borderRadius = '5px';
-        localeItem.style.backgroundColor = '#fafafa';
+            // If taxon_id exists, construct the dynamic URLs
+            if (topResultTaxonId) {
+                // URL for the first button
+                const baseUrl1 = "https://www.inaturalist.org/observations?subview=map&taxon_id=";
+                const dynamicUrl1 = `${baseUrl1}${topResultTaxonId}`;
 
-        localeItem.innerHTML = `${count} - ${locale}`;
-        
-        // Add click event to populate search field and trigger search
-        localeItem.onclick = function () {
-            document.getElementById('searchInput').value = locale;
-            performSearch(); // Trigger search with the locale
-        };
+                // URL for the second button with the additional field for DNA Barcode ITS
+                const baseUrl2 = "https://www.inaturalist.org/observations?subview=map&taxon_id=";
+                const dynamicUrl2 = `${baseUrl2}${topResultTaxonId}&field:DNA%20Barcode%20ITS=`;
 
-        localeListDiv.appendChild(localeItem);
-    });
-}
+                // Update the first button's onclick event with the dynamic URL
+                dynamicLinkButton1.onclick = function () {
+                    window.open(dynamicUrl1, "_blank");
+                };
 
-// Modify performSearch to also update the locale list
-function performSearch() {
-    const searchTerm = document.getElementById('searchInput').value.trim();
-    const results = [];
-
-    // Search through the data using the recursive function
-    searchRecursive(data.life, searchTerm, results);
-
-    // Display the search results
-    displayResults(results, searchTerm);
-
-    // Update the dynamic link based on the top result
-    updateDynamicLink(results);
-
-    // Count locales and display them
-    const localeCounts = countLocales(results);
-    displayLocales(localeCounts);
-}
-
-// Function to update two dynamic link buttons based on the top result's taxon_id
-function updateDynamicLink(results) {
-    const dynamicLinkButton1 = document.getElementById('dynamicLinkButton1');
-    const dynamicLinkButton2 = document.getElementById('dynamicLinkButton2');
-
-    if (results.length == 0) {
-        // Disable both buttons if no results
-        dynamicLinkButton1.disabled = true;
-        dynamicLinkButton2.disabled = true;
-    } else {
-        dynamicLinkButton1.disabled = false;
-        dynamicLinkButton2.disabled = false;
-
-        const topResultTaxonId = results[0].taxon_id;  // Get the taxon_id from the top result
-        const topResultLatinName = results[0].latinName;
-
-        // Update text for both buttons
-        dynamicLinkButton1.textContent = `View ${topResultLatinName} iNaturalist Observations`;
-        dynamicLinkButton2.textContent = `View ${topResultLatinName} iNaturalist Observations with DNA Barcode ITS`;
-
-        // If taxon_id exists, construct the dynamic URLs
-        if (topResultTaxonId) {
-            // URL for the first button
-            const baseUrl1 = "https://www.inaturalist.org/observations?subview=map&taxon_id=";
-            const dynamicUrl1 = `${baseUrl1}${topResultTaxonId}`;
-
-            // URL for the second button with the additional field for DNA Barcode ITS
-            const baseUrl2 = "https://www.inaturalist.org/observations?subview=map&taxon_id=";
-            const dynamicUrl2 = `${baseUrl2}${topResultTaxonId}&field:DNA%20Barcode%20ITS=`;
-
-            // Update the first button's onclick event with the dynamic URL
-            dynamicLinkButton1.onclick = function() {
-                window.open(dynamicUrl1, "_blank");
-            };
-
-            // Update the second button's onclick event with the dynamic URL including the DNA Barcode ITS field
-            dynamicLinkButton2.onclick = function() {
-                window.open(dynamicUrl2, "_blank");
-            };
+                // Update the second button's onclick event with the dynamic URL including the DNA Barcode ITS field
+                dynamicLinkButton2.onclick = function () {
+                    window.open(dynamicUrl2, "_blank");
+                };
+            }
         }
     }
-}
 
 
 
-        // Function to get a random key from the JSON data
-        function getRandomKeyFromData(data) {
-            const keys = [];
+    // Function to get a random key from the JSON data
+    function getRandomKeyFromData(data) {
+        const keys = [];
 
-            // Recursive function to collect all keys
-            function collectKeys(obj) {
-                if (obj == null) return;
+        // Recursive function to collect all keys
+        function collectKeys(obj) {
+            if (obj == null) return;
 
-                // If the object has keys, add them to the keys array
-                if (obj.keys && obj.keys.length > 0) {
-                    obj.keys.forEach(keyItem => keys.push(keyItem.title));
+            // If the object has keys, add them to the keys array
+            if (obj.keys && obj.keys.length > 0) {
+                obj.keys.forEach(keyItem => keys.push(keyItem.title));
+            }
+
+            // Recursively collect keys from nested taxons
+            ['kingdom', 'phylum', 'class', 'order', 'family', 'genus'].forEach(taxon => {
+                if (Array.isArray(obj[taxon])) {
+                    obj[taxon].forEach(collectKeys);
                 }
-
-                // Recursively collect keys from nested taxons
-                ['kingdom', 'phylum', 'class', 'order', 'family', 'genus'].forEach(taxon => {
-                    if (Array.isArray(obj[taxon])) {
-                        obj[taxon].forEach(collectKeys);
-                    }
-                });
-            }
-
-            collectKeys(data.life); // Start from the kingdom level
-
-            // Select a random key
-            if (keys.length > 0) {
-                const randomIndex = Math.floor(Math.random() * keys.length);
-                return keys[randomIndex];
-            }
-
-            return null;
+            });
         }
 
+        collectKeys(data.life); // Start from the kingdom level
 
-
-        // Function to fill in the search input with a random key
-        function exploreRandomKey() {
-            const randomKey = getRandomKeyFromData(data);  // Get random key
-
-            if (randomKey) {
-                const searchInput = document.getElementById('searchInput');
-                searchInput.value = randomKey;
-
-                // Optionally, trigger the search after filling in the random key
-                performSearch();
-            } else {
-                alert('No keys found in the data!');
-            }
+        // Select a random key
+        if (keys.length > 0) {
+            const randomIndex = Math.floor(Math.random() * keys.length);
+            return keys[randomIndex];
         }
 
-        // Function to clear the search input
-        function clearSelection() {
-            document.getElementById('searchInput').value = '';
-            performSearch(); // Optionally, trigger search to clear results
-        }
+        return null;
+    }
 
-    </script>
+
+
+    // Function to fill in the search input with a random key
+    function exploreRandomKey() {
+        const randomKey = getRandomKeyFromData(data);  // Get random key
+
+        if (randomKey) {
+
+            searchInput.value = randomKey;
+
+            // Optionally, trigger the search after filling in the random key
+            performSearch();
+        } else {
+            alert('No keys found in the data!');
+        }
+    }
+
+    // Function to clear the search input
+    function clearSelection() {
+        document.querySelector('.search-input').value = '';
+        performSearch(); // Optionally, trigger search to clear results
+    }
+
+</script>
+<script src="https://kit.fontawesome.com/da20ce3468.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
