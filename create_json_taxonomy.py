@@ -7,7 +7,6 @@ import requests
 import json
 import time
 
-
 # Constants
 API_URL_BASE = "https://api.inaturalist.org/v1/taxa"
 FUNGI_TAXON_ID = 47170
@@ -61,7 +60,10 @@ def build_taxonomic_hierarchy(parent_id, rank):
                         "title": row['title'],
                         "locale": row['locale'],
                         "authors": [author.strip() for author in row['authors'].split(';')],
-                        "url": row['url']  # Use the corresponding URL
+                        "url": row['url'],
+                        "language": row['language'],
+                        "type": row['type'],
+                        "country_code": row['country_code']
                     })
 
             taxon_data = {
@@ -96,7 +98,10 @@ for _, row in taxon_df.iterrows():
             "title": row['title'],
             "locale": row['locale'],
             "authors": [author.strip() for author in row['authors'].split(';')],
-            "url": row['url']  # Use the corresponding URL
+            "url": row['url'],
+            "language": row['language'],
+            "type": row['type'],
+            "country_code": row['country_code']
         })
 
 myxo_key_list = []
@@ -107,7 +112,10 @@ for _, row in taxon_df.iterrows():
             "title": row['title'],
             "locale": row['locale'],
             "authors": [author.strip() for author in row['authors'].split(';')],
-            "url": row['url']  # Use the corresponding URL
+            "url": row['url'],
+            "language": row['language'],
+            "type": row['type'],
+            "country_code": row['country_code']
         })
 
 
