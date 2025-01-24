@@ -1,6 +1,7 @@
 import pandas as pd 
 
-df = pd.read_excel('fungal_keys.xlsx')
+published_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQywAaJL-pZ0ioeHBVe8gpVO5UjrSBw2BA8fOIq-60OMOVESSRdH07u28EH-UotFGiSFbcqnosmH58G/pub?gid=0&single=true&output=csv"
+df = pd.read_csv(published_url)
 
 import requests
 import json
