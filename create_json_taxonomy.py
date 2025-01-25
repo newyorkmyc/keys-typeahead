@@ -1,11 +1,11 @@
 import pandas as pd 
 
-df = pd.read_excel('fungal_keys.xlsx')
+published_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQywAaJL-pZ0ioeHBVe8gpVO5UjrSBw2BA8fOIq-60OMOVESSRdH07u28EH-UotFGiSFbcqnosmH58G/pub?gid=0&single=true&output=csv"
+df = pd.read_csv(published_url)
 
 import requests
 import json
 import time
-
 
 # Constants
 API_URL_BASE = "https://api.inaturalist.org/v1/taxa"
@@ -57,10 +57,13 @@ def build_taxonomic_hierarchy(parent_id, rank):
 
             for _, row in taxon_df.iterrows():
                     key_list.append({
-                        "title": row['title'],
-                        "locale": row['locale'],
-                        "authors": [author.strip() for author in row['authors'].split(';')],
-                        "url": row['url']  # Use the corresponding URL
+                        "title": row['title'] if not pd.isna(row['title']) else None,
+                        "locale": row['locale'] if not pd.isna(row['locale']) else None,
+                        "authors": [author.strip() for author in row['authors'].split(';')] if not pd.isna(row['authors']) else None,
+                        "url": row['url'] if not pd.isna(row['url']) else None,
+                        "language": row['language'] if not pd.isna(row['language']) else None,
+                        "type": row['type'] if not pd.isna(row['type']) else None,
+                        "country_code": row['country_code'] if not pd.isna(row['country_code']) else None
                     })
 
             taxon_data = {
@@ -92,10 +95,13 @@ taxon_df = df.loc[df['inat_taxon'] == 'Fungi']
 
 for _, row in taxon_df.iterrows():
         fungi_key_list.append({
-            "title": row['title'],
-            "locale": row['locale'],
-            "authors": [author.strip() for author in row['authors'].split(';')],
-            "url": row['url']  # Use the corresponding URL
+            "title": row['title'] if not pd.isna(row['title']) else None,
+            "locale": row['locale'] if not pd.isna(row['locale']) else None,
+            "authors": [author.strip() for author in row['authors'].split(';')] if not pd.isna(row['authors']) else None,
+            "url": row['url'] if not pd.isna(row['url']) else None,
+            "language": row['language'] if not pd.isna(row['language']) else None,
+            "type": row['type'] if not pd.isna(row['type']) else None,
+            "country_code": row['country_code'] if not pd.isna(row['country_code']) else None
         })
 
 myxo_key_list = []
@@ -103,10 +109,13 @@ taxon_df = df.loc[df['inat_taxon'] == 'Mycetozoa']
 
 for _, row in taxon_df.iterrows():
         myxo_key_list.append({
-            "title": row['title'],
-            "locale": row['locale'],
-            "authors": [author.strip() for author in row['authors'].split(';')],
-            "url": row['url']  # Use the corresponding URL
+            "title": row['title'] if not pd.isna(row['title']) else None,
+            "locale": row['locale'] if not pd.isna(row['locale']) else None,
+            "authors": [author.strip() for author in row['authors'].split(';')] if not pd.isna(row['authors']) else None,
+            "url": row['url'] if not pd.isna(row['url']) else None,
+            "language": row['language'] if not pd.isna(row['language']) else None,
+            "type": row['type'] if not pd.isna(row['type']) else None,
+            "country_code": row['country_code'] if not pd.isna(row['country_code']) else None
         })
 
 
