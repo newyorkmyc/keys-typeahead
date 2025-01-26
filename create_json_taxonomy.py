@@ -1,4 +1,4 @@
-import pandas as pd 
+import pandas as pd
 
 published_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQywAaJL-pZ0ioeHBVe8gpVO5UjrSBw2BA8fOIq-60OMOVESSRdH07u28EH-UotFGiSFbcqnosmH58G/pub?gid=0&single=true&output=csv"
 df = pd.read_csv(published_url)
@@ -37,9 +37,9 @@ def build_taxonomic_hierarchy(parent_id, rank):
     taxa = fetch_taxa(rank, parent_id)
     time.sleep(RATE_LIMIT_DELAY)  # Respect rate limits
 
-    
+
     hierarchy = []
-    
+
     for taxon in taxa:
         print(taxon['name'])
         taxon_df = df.loc[df['inat_taxon'] == taxon['name']]
@@ -73,7 +73,7 @@ def build_taxonomic_hierarchy(parent_id, rank):
                 "keys": key_list
             }
                 # if its not empty, for loop through the keys and fill out
-        
+
         # Fetch lower ranks if applicable
         if rank == "phylum":
             taxon_data["class"] = build_taxonomic_hierarchy(taxon['id'], "class")
@@ -83,11 +83,10 @@ def build_taxonomic_hierarchy(parent_id, rank):
             taxon_data["family"] = build_taxonomic_hierarchy(taxon['id'], "family")
         elif rank == "family":
             taxon_data["genus"] = build_taxonomic_hierarchy(taxon['id'], "genus")
-        
-        hierarchy.append(taxon_data)
-    
-    return hierarchy
 
+        hierarchy.append(taxon_data)
+
+    return hierarchy
 
 
 fungi_key_list = []
@@ -101,7 +100,8 @@ for _, row in taxon_df.iterrows():
             "url": row['url'] if not pd.isna(row['url']) else None,
             "language": row['language'] if not pd.isna(row['language']) else None,
             "type": row['type'] if not pd.isna(row['type']) else None,
-            "country_code": row['country_code'] if not pd.isna(row['country_code']) else None
+            "country_code": row['country_code'] if not pd.isna(row['country_code']) else None,
+            "country": row['country'] if not pd.isna(row['country']) else None
         })
 
 myxo_key_list = []
@@ -115,72 +115,9 @@ for _, row in taxon_df.iterrows():
             "url": row['url'] if not pd.isna(row['url']) else None,
             "language": row['language'] if not pd.isna(row['language']) else None,
             "type": row['type'] if not pd.isna(row['type']) else None,
-            "country_code": row['country_code'] if not pd.isna(row['country_code']) else None
+            "country_code": row['country_code'] if not pd.isna(row['country_code']) else None,
+            "country": row['country'] if not pd.isna(row['country']) else None
         })
-
-
-fungi_data = {
-    "life": {
-        "latinName": "Life",
-        "commonName": "Life",
-        "taxon_id": 0,
-        "keys": [],
-        "kingdom": [
-            {
-                "latinName": "Fungi",
-                "commonName": "Fungi",
-                "taxon_id": 47170,
-                "keys": fungi_key_list,
-                "phylum": build_taxonomic_hierarchy(FUNGI_TAXON_ID, "phylum")
-            },
-            {
-               "latinName": "Protozoa",
-                "commonName": "Protozoans",
-                "taxon_id": 47686,
-                "keys": [],
-                "phylum": [
-                    {            
-                        "latinName": "Mycetozoa",
-                        "commonName": "Slime Molds",
-                        "taxon_id": 47685,
-                        "keys": myxo_key_list,
-                        "class": build_taxonomic_hierarchy(MYXO_TAXON_ID, "order")
-                    }
-                ]
-            }
-        ]
-    }    
-}
-
-# Build the JSON structure for kingdom Fungi WORKING ORIGINAL #### THIS NEEDS TO BE FIXED ASAP
-# You need to put a taxon ID, and then the next lowest taxon with it, so phylum for fungi
-# fungi_data = { # OG
-#     "kingdom": {
-#         "latinName": taxon['name'],
-#         "commonName": taxon['preferred_common_name'] if 'preferred_common_name' in taxon else None,
-#         "taxon_id": taxon['id'],
-#         "keys": key_list
-#         "phylum": build_taxonomic_hierarchy(TAXON_ID, "phylum")
-#     }
-# }
-
-# TAXON_ID = 118249# for testing only
-
-# fungi_data = {
-#     "kingdom": {
-#         "latinName": "Fungi",
-#         "commonName": "Fungi",
-#         "keys": [
-#             {
-#                 "title": "Introduction to the Fungi Kingdom",
-#                 "authors": ["John Doe", "Jane Smith"],  # Placeholder
-#                 "url": "https://example.com/fungi-kingdom"
-#             }
-#         ],
-#         "phylum": build_taxonomic_hierarchy(TAXON_ID, "genus")
-#     }
-# }
-
 
 # Write the JSON data to a file
 with open('fungi_taxonomy.json', 'w') as json_file:
