@@ -181,7 +181,6 @@ article.search-result:hover {
     outline: 1px solid #000;
     /* border-top: 3px solid #e2f5be;
     border-bottom: 3px solid #e2f5be; */
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍄‍🟫</text></svg>") 16 0, auto;
 }
 aside {
     margin: 16px;
@@ -195,7 +194,13 @@ aside {
 aside .menu-external {
     background-color: #f4deba;
 }
-
+aside .menu-external .dynamic-link {
+    display: block;
+}
+aside .menu-external .dynamic-link:hover {
+    background-color: #e2f5be;
+    cursor: pointer;
+}
 aside .menu-country {
     background-color: #e2f5be;
     margin-top: 32px;
@@ -208,6 +213,12 @@ aside .menu-country--list {
 
 aside .menu-country--item {
     margin: 4px 0;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+aside .menu-country--item:hover {
+    background-color: #f4deba;
+    cursor: pointer;
 }
 
 aside .menu {
