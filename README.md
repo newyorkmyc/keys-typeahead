@@ -15,7 +15,7 @@ Here is an overview of the columns
 |---------------	|------------------------------------------------------------------------------------	|------------	|-----------	|
 | inat_taxon    	| Name as seen on inaturalist.org                                                    	| string     	|           	|
 | Title         	| Title of the paper, website and or key to species                                  	| string     	|           	|
-| locale        	| What part of the world, this key covers                                            	| string     	|           	|
+| locale        	| What part of the world, this key covers                                            	| dropdown    | 1 choice    |
 | authors       	| Name of the author(s) who wrote the key                                            	| string     	|           	|
 | url           	| Link to the key                                                                    	| url        	| url       	|
 | language      	| Language the key appears in using a 2 letter country code. (e.g. `en` for English) 	| string     	| 2 letters 	|
