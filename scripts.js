@@ -158,12 +158,13 @@ function countCountry(results) {
 
 // Function to display countries with their count
 function displayCountries(countryCounts) {
+    console.log({countryCounts})
     const countryList = document.querySelector('.menu-country--list');
     countryList.innerHTML = ''; // Clear previous country list
 
     Object.keys(countryCounts).forEach(country => {
         const count = countryCounts[country];
-
+        console.log({country})
         const countryItem = document.createElement('li');
         countryItem.classList.add('menu-country--item')
 
