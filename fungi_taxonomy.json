@@ -11,19 +11,8 @@
                 "taxon_id": 47170,
                 "keys": [
                     {
-                        "title": "Key to British genera of agarics and boleti",
-                        "locale": "United Kingdom",
-                        "authors": [
-                            "Archie McAdam/BMS"
-                        ],
-                        "url": "https://www.britmycolsoc.org.uk/application/files/7415/2455/1969/British_Agarics_Boletes.pdf",
-                        "language": "en",
-                        "type": "url",
-                        "country_code": "bg"
-                    },
-                    {
                         "title": "Equatorial fungi \u2013 mycological biodiversity in Ecuador",
-                        "locale": "Ecuador",
+                        "locale": "Central America",
                         "authors": [
                             "L\u00e6ss\u00f8e, Thomas",
                             "Petersen, Jens H."
@@ -34,26 +23,15 @@
                         "country_code": "ec"
                     },
                     {
-                        "title": "Key to Major Groups of Mushrooms",
-                        "locale": "North America",
+                        "title": "Champignons de Charente-Maritime, Charente et Deux Sevres",
+                        "locale": "Europe",
                         "authors": [
-                            "Kuo, Michael"
+                            "Tanchaud, Patrice"
                         ],
-                        "url": "https://www.mushroomexpert.com/major_groups.html",
-                        "language": "en",
+                        "url": "https://www.mycocharentes.fr/index.php?page=Alpha",
+                        "language": "fr",
                         "type": "url",
-                        "country_code": "us"
-                    },
-                    {
-                        "title": "IDENTIFICATION OF MOULDS (MOLDS)",
-                        "locale": "Global",
-                        "authors": [
-                            "Malloch, David"
-                        ],
-                        "url": "http://website.nbm-mnb.ca/mycologywebpages/Moulds/Identification.html#Dichotomous%20keys",
-                        "language": "en",
-                        "type": "url",
-                        "country_code": "ww"
+                        "country_code": "fr"
                     },
                     {
                         "title": "Fungi Growing on Wood Key to Shapes",
@@ -67,15 +45,27 @@
                         "country_code": "ww"
                     },
                     {
-                        "title": "Champignons de Charente-Maritime, Charente et Deux Sevres",
-                        "locale": "France",
+                        "title": "Mycokeys",
+                        "locale": "Global",
                         "authors": [
-                            "Tanchaud, Patrice"
+                            "Petersen, Jens H.",
+                            "L\u00e6ss\u00f8e, Thomas"
                         ],
-                        "url": "https://www.mycocharentes.fr/index.php?page=Alpha",
-                        "language": "fr",
+                        "url": "https://mycokey.com/",
+                        "language": "en",
                         "type": "url",
-                        "country_code": "fr"
+                        "country_code": "ww"
+                    },
+                    {
+                        "title": "Key to Major Groups of Mushrooms",
+                        "locale": "North America",
+                        "authors": [
+                            "Kuo, Michael"
+                        ],
+                        "url": "https://www.mushroomexpert.com/major_groups.html",
+                        "language": "en",
+                        "type": "url",
+                        "country_code": "us"
                     },
                     {
                         "title": "Key to fungi",
@@ -100,30 +90,8 @@
                         "country_code": "us"
                     },
                     {
-                        "title": "Pictorial Key to Mushrooms of the Pacific Northwest",
-                        "locale": "Pacific Northwesst, North America",
-                        "authors": [
-                            "by Danny Miller"
-                        ],
-                        "url": "https://www.alpental.com/psms/PNWMushrooms/PictorialKey/index.htm",
-                        "language": "en",
-                        "type": "url",
-                        "country_code": "us"
-                    },
-                    {
-                        "title": "Mycokeys",
-                        "locale": "Global",
-                        "authors": [
-                            "Jens H. Petersen & Thomas L\u00e6ss\u00f8e"
-                        ],
-                        "url": "https://mycokey.com/",
-                        "language": "en",
-                        "type": "url",
-                        "country_code": "ww"
-                    },
-                    {
                         "title": "Champignons de Quebec",
-                        "locale": "Northeastern,  North America",
+                        "locale": "North America",
                         "authors": [
                             "MycoQuebec"
                         ],
@@ -133,8 +101,30 @@
                         "country_code": "ca"
                     },
                     {
+                        "title": "Pictorial Key to Mushrooms of the Pacific Northwest",
+                        "locale": "North America",
+                        "authors": [
+                            "Miller, Danny"
+                        ],
+                        "url": "https://www.alpental.com/psms/PNWMushrooms/PictorialKey/index.htm",
+                        "language": "en",
+                        "type": "url",
+                        "country_code": "us"
+                    },
+                    {
+                        "title": "Key to British genera of agarics and boleti",
+                        "locale": "Europe",
+                        "authors": [
+                            "McAdam, Archie"
+                        ],
+                        "url": "https://www.britmycolsoc.org.uk/application/files/7415/2455/1969/British_Agarics_Boletes.pdf",
+                        "language": "en",
+                        "type": "url",
+                        "country_code": "bg"
+                    },
+                    {
                         "title": "Wood decay fungi",
-                        "locale": "United Kingdom",
+                        "locale": "Western Europe",
                         "authors": [
                             "New York State Arborists Association, ISA Chapter"
                         ],
@@ -152,7 +142,7 @@
                         "keys": [
                             {
                                 "title": "A FIELD KEY TO COMMON GENERA OF HYPOGEOUS AND GASTERIOD BASIDIOMYCETES OF NORTH AMERICA",
-                                "locale": "Pacific Northwest, North America",
+                                "locale": "North America",
                                 "authors": [
                                     "Miller, Steven L."
                                 ],
@@ -194,7 +184,7 @@
                                                 "keys": [
                                                     {
                                                         "title": "Draft Key to Amanitaceae of Costa Rica & Neighboring Regions (with Emphasis on Species from Forests Including Quercus)",
-                                                        "locale": "Costa Rica",
+                                                        "locale": "Central America",
                                                         "authors": [
                                                             "Tulloss, Rod E."
                                                         ],
@@ -274,7 +264,7 @@
                                                 "keys": [
                                                     {
                                                         "title": "KEYS TO SECTIONS OF PARASOLA, COPRINELLUS, COPRINOPSIS AND COPRINUS IN BRITAIN",
-                                                        "locale": "United Kingdom",
+                                                        "locale": "Western Europe",
                                                         "authors": [
                                                             "Schafer, Derek J."
                                                         ],
@@ -401,6 +391,17 @@
                                                         "taxon_id": 49548,
                                                         "keys": [
                                                             {
+                                                                "title": "Trial Key to Common Agaricus Species of the Central California Coast*",
+                                                                "locale": "North America",
+                                                                "authors": [
+                                                                    "Stevens, Fred"
+                                                                ],
+                                                                "url": "https://www.mykoweb.com/misc/Agaricus_key.pdf",
+                                                                "language": "en",
+                                                                "type": ".pdf",
+                                                                "country_code": "us"
+                                                            },
+                                                            {
                                                                 "title": "The Genus Agaricus Key",
                                                                 "locale": "North America",
                                                                 "authors": [
@@ -413,7 +414,7 @@
                                                             },
                                                             {
                                                                 "title": "Trial field key to the species of AGARICUS in the Pacific Northwest",
-                                                                "locale": "Pacific Northwest, North America",
+                                                                "locale": "North America",
                                                                 "authors": [
                                                                     "Chariton, Laverne R."
                                                                 ],
@@ -424,7 +425,7 @@
                                                             },
                                                             {
                                                                 "title": "Fungi Key - Agaricus",
-                                                                "locale": "Queensland",
+                                                                "locale": "Australia & New Zealand",
                                                                 "authors": [
                                                                     "Leonard, Pat"
                                                                 ],
@@ -432,17 +433,6 @@
                                                                 "language": "en",
                                                                 "type": "url",
                                                                 "country_code": "au"
-                                                            },
-                                                            {
-                                                                "title": "Trial Key to Common Agaricus Species of the Central California Coast*",
-                                                                "locale": "California",
-                                                                "authors": [
-                                                                    "Stevens, Fred"
-                                                                ],
-                                                                "url": "https://www.mykoweb.com/misc/Agaricus_key.pdf",
-                                                                "language": "en",
-                                                                "type": ".pdf",
-                                                                "country_code": "us"
                                                             }
                                                         ]
                                                     },
@@ -931,7 +921,7 @@
                                                 "keys": [
                                                     {
                                                         "title": "Monograph of the New Zealand Hygrophoraceae (Agaricales)",
-                                                        "locale": "New Zealand",
+                                                        "locale": "Australia & New Zealand",
                                                         "authors": [
                                                             "Horak, Egon"
                                                         ],
@@ -1383,7 +1373,7 @@
                                                         "keys": [
                                                             {
                                                                 "title": "Key to Species of Rhodocollybia",
-                                                                "locale": "Northeastern, North America",
+                                                                "locale": "North America",
                                                                 "authors": [
                                                                     "New York Botanical Garden"
                                                                 ],
@@ -1509,7 +1499,7 @@
                                                         "keys": [
                                                             {
                                                                 "title": "A revision of Collybia s.l. in the northeastern United States & adjacent Canada",
-                                                                "locale": "Northeastern,  North America",
+                                                                "locale": "North America",
                                                                 "authors": [
                                                                     "Halling, Roy E."
                                                                 ],
@@ -1767,7 +1757,7 @@
                                                                 "title": "Coprinus - Studies in Coprinus - keys to subsections and species in Coprinus",
                                                                 "locale": "Global",
                                                                 "authors": [
-                                                                    "Kees Ulj\u00e9"
+                                                                    "Ulj\u00e9, Kees"
                                                                 ],
                                                                 "url": "https://www.grzyby.pl/coprinus-site-Kees-Uljee/species/Coprinus.htm",
                                                                 "language": "en",
@@ -2943,12 +2933,6 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Amaurohydnum",
-                                                        "commonName": null,
-                                                        "taxon_id": 1201525,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Columnodontia",
                                                         "commonName": null,
                                                         "taxon_id": 1292706,
@@ -2958,6 +2942,12 @@
                                                         "latinName": "Phlebiporia",
                                                         "commonName": null,
                                                         "taxon_id": 1231509,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Amaurohydnum",
+                                                        "commonName": null,
+                                                        "taxon_id": 1201525,
                                                         "keys": []
                                                     },
                                                     {
@@ -3005,15 +2995,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Meruliopsis",
-                                                        "commonName": null,
-                                                        "taxon_id": 353122,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Leptoporus",
                                                         "commonName": null,
                                                         "taxon_id": 374856,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Meruliopsis",
+                                                        "commonName": null,
+                                                        "taxon_id": 353122,
                                                         "keys": []
                                                     },
                                                     {
@@ -3772,20 +3762,6 @@
                                                 "genus": []
                                             },
                                             {
-                                                "latinName": "Fragiliporiaceae",
-                                                "commonName": null,
-                                                "taxon_id": 1230692,
-                                                "keys": [],
-                                                "genus": [
-                                                    {
-                                                        "latinName": "Fragiliporia",
-                                                        "commonName": null,
-                                                        "taxon_id": 1230659,
-                                                        "keys": []
-                                                    }
-                                                ]
-                                            },
-                                            {
                                                 "latinName": "Fibroporiaceae",
                                                 "commonName": null,
                                                 "taxon_id": 1415507,
@@ -3798,6 +3774,13 @@
                                                         "keys": []
                                                     }
                                                 ]
+                                            },
+                                            {
+                                                "latinName": "Pycnoporellaceae",
+                                                "commonName": null,
+                                                "taxon_id": 1415509,
+                                                "keys": [],
+                                                "genus": []
                                             }
                                         ]
                                     },
@@ -3930,15 +3913,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Acanthophysellum",
-                                                        "commonName": null,
-                                                        "taxon_id": 987020,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Acanthophysium",
                                                         "commonName": null,
                                                         "taxon_id": 174704,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Acanthophysellum",
+                                                        "commonName": null,
+                                                        "taxon_id": 987020,
                                                         "keys": []
                                                     },
                                                     {
@@ -4387,7 +4370,7 @@
                                                         "title": "The Bolete Filter",
                                                         "locale": "North America",
                                                         "authors": [
-                                                            "Scott Pavelle"
+                                                            "Pavelle, Scott"
                                                         ],
                                                         "url": "https://boletes.wpamushroomclub.org/",
                                                         "language": "en",
@@ -5252,15 +5235,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Blasiphalia",
-                                                        "commonName": null,
-                                                        "taxon_id": 1218704,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Atheloderma",
                                                         "commonName": null,
                                                         "taxon_id": 988011,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Blasiphalia",
+                                                        "commonName": null,
+                                                        "taxon_id": 1218704,
                                                         "keys": []
                                                     }
                                                 ]
@@ -6128,15 +6111,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Hosakaea",
-                                                        "commonName": null,
-                                                        "taxon_id": 1518956,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Phlebogaster",
                                                         "commonName": null,
                                                         "taxon_id": 1395943,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Hosakaea",
+                                                        "commonName": null,
+                                                        "taxon_id": 1518956,
                                                         "keys": []
                                                     }
                                                 ]
@@ -6577,9 +6560,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Dendrodontia",
+                                                        "latinName": "Marchandiomphalina",
                                                         "commonName": null,
-                                                        "taxon_id": 1109187,
+                                                        "taxon_id": 1047033,
                                                         "keys": []
                                                     },
                                                     {
@@ -6589,9 +6572,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Marchandiomphalina",
+                                                        "latinName": "Dendrodontia",
                                                         "commonName": null,
-                                                        "taxon_id": 1047033,
+                                                        "taxon_id": 1109187,
                                                         "keys": []
                                                     },
                                                     {
@@ -6757,15 +6740,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Elaphocephala",
-                                                        "commonName": null,
-                                                        "taxon_id": 1462385,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Pteridomyces",
                                                         "commonName": null,
                                                         "taxon_id": 1286015,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Elaphocephala",
+                                                        "commonName": null,
+                                                        "taxon_id": 1462385,
                                                         "keys": []
                                                     },
                                                     {
@@ -7305,6 +7288,12 @@
                                                         "keys": []
                                                     },
                                                     {
+                                                        "latinName": "Polioma",
+                                                        "commonName": null,
+                                                        "taxon_id": 353006,
+                                                        "keys": []
+                                                    },
+                                                    {
                                                         "latinName": "Dipyxis",
                                                         "commonName": null,
                                                         "taxon_id": 353168,
@@ -7323,9 +7312,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Polioma",
+                                                        "latinName": "Trichopsora",
                                                         "commonName": null,
-                                                        "taxon_id": 353006,
+                                                        "taxon_id": 968638,
                                                         "keys": []
                                                     },
                                                     {
@@ -7338,12 +7327,6 @@
                                                         "latinName": "Chrysocyclus",
                                                         "commonName": null,
                                                         "taxon_id": 1047047,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Trichopsora",
-                                                        "commonName": null,
-                                                        "taxon_id": 968638,
                                                         "keys": []
                                                     },
                                                     {
@@ -7631,21 +7614,21 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Atelocauda",
-                                                        "commonName": null,
-                                                        "taxon_id": 179236,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Chaconia",
                                                         "commonName": null,
                                                         "taxon_id": 328340,
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Diabole",
+                                                        "latinName": "Spumula",
                                                         "commonName": null,
-                                                        "taxon_id": 353220,
+                                                        "taxon_id": 352490,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Atelocauda",
+                                                        "commonName": null,
+                                                        "taxon_id": 179236,
                                                         "keys": []
                                                     },
                                                     {
@@ -7655,9 +7638,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Spumula",
+                                                        "latinName": "Diabole",
                                                         "commonName": null,
-                                                        "taxon_id": 352490,
+                                                        "taxon_id": 353220,
                                                         "keys": []
                                                     },
                                                     {
@@ -9348,7 +9331,7 @@
                                 "keys": [
                                     {
                                         "title": "KEY FOR SMUT FUNGI KNOWN IN COSTA RICA BASED ON FAMILIES OF THE HOST PLANTS",
-                                        "locale": "Costa Rica",
+                                        "locale": "Central America",
                                         "authors": [
                                             "Piepenbring, Meike"
                                         ],
@@ -9518,15 +9501,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Cintractia",
-                                                        "commonName": null,
-                                                        "taxon_id": 374603,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Moreaua",
                                                         "commonName": null,
                                                         "taxon_id": 374930,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Cintractia",
+                                                        "commonName": null,
+                                                        "taxon_id": 374603,
                                                         "keys": []
                                                     },
                                                     {
@@ -10526,18 +10509,6 @@
                         "taxon_id": 48250,
                         "keys": [
                             {
-                                "title": "KEYS TO THE GENERA OF TRUFFLES (ASCOMYCETES)",
-                                "locale": "Pacific Northwest, North America",
-                                "authors": [
-                                    "Trappe, James M.",
-                                    "Castellano, Michael A."
-                                ],
-                                "url": "https://www.natruffling.org/ascokey.htm",
-                                "language": "en",
-                                "type": "url",
-                                "country_code": "us"
-                            },
-                            {
                                 "title": "The North American Cup-fungi",
                                 "locale": "North America",
                                 "authors": [
@@ -10546,6 +10517,18 @@
                                 "url": "https://www.mykoweb.com/systematics/literature/North%20American%20Cup-fungi%20Inoperculates.pdf",
                                 "language": "en",
                                 "type": ".pdf",
+                                "country_code": "us"
+                            },
+                            {
+                                "title": "KEYS TO THE GENERA OF TRUFFLES (ASCOMYCETES)",
+                                "locale": "North America",
+                                "authors": [
+                                    "Trappe, James M.",
+                                    "Castellano, Michael A."
+                                ],
+                                "url": "https://www.natruffling.org/ascokey.htm",
+                                "language": "en",
+                                "type": "url",
                                 "country_code": "us"
                             }
                         ],
@@ -10556,19 +10539,30 @@
                                 "taxon_id": 54743,
                                 "keys": [
                                     {
-                                        "title": "Urban Lichen Identification Guide",
-                                        "locale": "United Kingdom",
+                                        "title": "Lime Loving Lichens",
+                                        "locale": "North America",
                                         "authors": [
-                                            "Pestiaux, Lucie"
+                                            "Unknown"
                                         ],
-                                        "url": "https://blogs.ed.ac.uk/lichenwalk/wp-content/uploads/sites/4888/2021/08/ID_GUIDE.pdf",
+                                        "url": "https://www.nybg.org/bsci/lichens/eln/lime_loving_lichens.htm",
+                                        "language": "en",
+                                        "type": "url",
+                                        "country_code": "us"
+                                    },
+                                    {
+                                        "title": "Common Lichens of North Carolina, USA",
+                                        "locale": "North America",
+                                        "authors": [
+                                            "Perlmutter, Gary B."
+                                        ],
+                                        "url": "https://auth1.dpr.ncparks.gov/ncbp/ncbp_posters/brian/Common%20Lichens%20of%20North%20Carolina.pdf",
                                         "language": "en",
                                         "type": ".pdf",
-                                        "country_code": "gb"
+                                        "country_code": "us"
                                     },
                                     {
                                         "title": "IDENTIFYING LICHENS OF NOVA SCOTIA",
-                                        "locale": "Nova Scotia",
+                                        "locale": "North America",
                                         "authors": [
                                             "Brodo, Irwin M.",
                                             "Cameron, Robert",
@@ -10581,19 +10575,19 @@
                                         "country_code": "ca"
                                     },
                                     {
-                                        "title": "Lime Loving Lichens",
-                                        "locale": "Eastern, North America",
+                                        "title": "Urban Lichen Identification Guide",
+                                        "locale": "Western Europe",
                                         "authors": [
-                                            "Unknown"
+                                            "Pestiaux, Lucie"
                                         ],
-                                        "url": "https://www.nybg.org/bsci/lichens/eln/lime_loving_lichens.htm",
+                                        "url": "https://blogs.ed.ac.uk/lichenwalk/wp-content/uploads/sites/4888/2021/08/ID_GUIDE.pdf",
                                         "language": "en",
-                                        "type": "url",
-                                        "country_code": "us"
+                                        "type": ".pdf",
+                                        "country_code": "gb"
                                     },
                                     {
                                         "title": "Explore Nature Lichen Identification Guide",
-                                        "locale": "United Kingdom",
+                                        "locale": "Western Europe",
                                         "authors": [
                                             "Unknown"
                                         ],
@@ -10601,17 +10595,6 @@
                                         "language": "en",
                                         "type": ".pdf",
                                         "country_code": "gb"
-                                    },
-                                    {
-                                        "title": "Common Lichens of North Carolina, USA",
-                                        "locale": "North Carolina, North America",
-                                        "authors": [
-                                            "Perlmutter, Gary B."
-                                        ],
-                                        "url": "https://auth1.dpr.ncparks.gov/ncbp/ncbp_posters/brian/Common%20Lichens%20of%20North%20Carolina.pdf",
-                                        "language": "en",
-                                        "type": ".pdf",
-                                        "country_code": "us"
                                     }
                                 ],
                                 "order": [
@@ -10634,7 +10617,7 @@
                                                         "keys": [
                                                             {
                                                                 "title": "Key to European Usnea species",
-                                                                "locale": "Europe",
+                                                                "locale": "Eastern Europe",
                                                                 "authors": [
                                                                     "Randlane, Tiina",
                                                                     "T\u00f5rra, tiiu",
@@ -10655,7 +10638,7 @@
                                                         "keys": [
                                                             {
                                                                 "title": "Flora of Australia - FLAVOPARMELIA ",
-                                                                "locale": "Australia",
+                                                                "locale": "Australia & New Zealand",
                                                                 "authors": [
                                                                     "Elix, John A."
                                                                 ],
@@ -11581,15 +11564,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Pyrenotrichum",
-                                                        "commonName": null,
-                                                        "taxon_id": 379245,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Chlorocyphella",
                                                         "commonName": null,
                                                         "taxon_id": 378842,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Pyrenotrichum",
+                                                        "commonName": null,
+                                                        "taxon_id": 379245,
                                                         "keys": []
                                                     },
                                                     {
@@ -12553,7 +12536,7 @@
                                                         "keys": [
                                                             {
                                                                 "title": "The lichen genus Physcia (Schreb.) Michx (Physciaceae: Ascomycota) in New Zealand",
-                                                                "locale": "New Zealand",
+                                                                "locale": "Australia & New Zealand",
                                                                 "authors": [
                                                                     "Moberg, R.",
                                                                     "Galloway, D. J."
@@ -12632,15 +12615,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Trachylia",
-                                                        "commonName": null,
-                                                        "taxon_id": 379362,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Culbersonia",
                                                         "commonName": null,
                                                         "taxon_id": 175921,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Trachylia",
+                                                        "commonName": null,
+                                                        "taxon_id": 379362,
                                                         "keys": []
                                                     }
                                                 ]
@@ -13074,7 +13057,7 @@
                                                 "keys": [
                                                     {
                                                         "title": "Graphidaceae of Central French Guiana",
-                                                        "locale": "French Guiana",
+                                                        "locale": "South America",
                                                         "authors": [
                                                             "Harris, Richard C.",
                                                             "Buck, William R."
@@ -13561,7 +13544,7 @@
                                                         "keys": [
                                                             {
                                                                 "title": "Lichen Flora of Eastern North America: The Genus Gomphillus (Gomphillaceae)",
-                                                                "locale": "Eastern, North America",
+                                                                "locale": "North America",
                                                                 "authors": [
                                                                     "Buck, William R."
                                                                 ],
@@ -13651,15 +13634,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Spinomyces",
-                                                        "commonName": null,
-                                                        "taxon_id": 1587515,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Bullatina",
                                                         "commonName": null,
                                                         "taxon_id": 175922,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Spinomyces",
+                                                        "commonName": null,
+                                                        "taxon_id": 1587515,
                                                         "keys": []
                                                     },
                                                     {
@@ -14079,21 +14062,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Pachyphysis",
+                                                        "latinName": "Xenolecia",
                                                         "commonName": null,
-                                                        "taxon_id": 463648,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Nothoporpidia",
-                                                        "commonName": null,
-                                                        "taxon_id": 379161,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Poeltidea",
-                                                        "commonName": null,
-                                                        "taxon_id": 379217,
+                                                        "taxon_id": 555413,
                                                         "keys": []
                                                     },
                                                     {
@@ -14103,9 +14074,21 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Xenolecia",
+                                                        "latinName": "Pachyphysis",
                                                         "commonName": null,
-                                                        "taxon_id": 555413,
+                                                        "taxon_id": 463648,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Poeltidea",
+                                                        "commonName": null,
+                                                        "taxon_id": 379217,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Nothoporpidia",
+                                                        "commonName": null,
+                                                        "taxon_id": 379161,
                                                         "keys": []
                                                     },
                                                     {
@@ -14599,15 +14582,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Dictyothyrium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1020580,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Scolecopeltidium",
                                                         "commonName": null,
                                                         "taxon_id": 1089401,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Dictyothyrium",
+                                                        "commonName": null,
+                                                        "taxon_id": 1020580,
                                                         "keys": []
                                                     },
                                                     {
@@ -14693,7 +14676,7 @@
                                                         "keys": [
                                                             {
                                                                 "title": "Peziza",
-                                                                "locale": "United Kingdom",
+                                                                "locale": "Western Europe",
                                                                 "authors": [
                                                                     "Consortium of partners"
                                                                 ],
@@ -15803,7 +15786,7 @@
                                 "keys": [
                                     {
                                         "title": "Pyrenomycetes of the Great Smoky Mountains National Park. V. Annulohypoxylon and Hypoxylon (Xylariaceae)",
-                                        "locale": "Eastern, North America",
+                                        "locale": "North America",
                                         "authors": [
                                             "Vasilyeva, Larissa N.",
                                             "Rogers, Jack D.",
@@ -15829,7 +15812,7 @@
                                                 "keys": [
                                                     {
                                                         "title": "Pyrenomycetes from southwestern France",
-                                                        "locale": "France",
+                                                        "locale": "Europe",
                                                         "authors": [
                                                             "Fournier, Jaques",
                                                             "Magni, Jean-Fran\u00e7ois"
@@ -16055,7 +16038,7 @@
                                                         "keys": [
                                                             {
                                                                 "title": "Three New Species of Hypoxylon (Xylariales, Ascomycota) on a Multigene Phylogeny from Medog in Southwest China",
-                                                                "locale": "China",
+                                                                "locale": "Asia",
                                                                 "authors": [
                                                                     "Song, Zi-Kun",
                                                                     "Zhu, An-Hong",
@@ -17238,15 +17221,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Ochronectria",
-                                                        "commonName": null,
-                                                        "taxon_id": 552863,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Halonectria",
                                                         "commonName": null,
                                                         "taxon_id": 1223114,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Ochronectria",
+                                                        "commonName": null,
+                                                        "taxon_id": 552863,
                                                         "keys": []
                                                     },
                                                     {
@@ -17274,9 +17257,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Dimerosporiella",
+                                                        "latinName": "Gracilistilbella",
                                                         "commonName": null,
-                                                        "taxon_id": 1138070,
+                                                        "taxon_id": 969754,
                                                         "keys": []
                                                     },
                                                     {
@@ -17286,27 +17269,27 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Gracilistilbella",
+                                                        "latinName": "Dimerosporiella",
                                                         "commonName": null,
-                                                        "taxon_id": 969754,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Rhopalocladium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1525298,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Waltergamsia",
-                                                        "commonName": null,
-                                                        "taxon_id": 1560435,
+                                                        "taxon_id": 1138070,
                                                         "keys": []
                                                     },
                                                     {
                                                         "latinName": "Anthonectria",
                                                         "commonName": null,
                                                         "taxon_id": 1452866,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Aphanotria",
+                                                        "commonName": null,
+                                                        "taxon_id": 1452868,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Battarrina",
+                                                        "commonName": null,
+                                                        "taxon_id": 1452870,
                                                         "keys": []
                                                     }
                                                 ]
@@ -17418,12 +17401,6 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Memnoniella",
-                                                        "commonName": null,
-                                                        "taxon_id": 328152,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Virgatospora",
                                                         "commonName": null,
                                                         "taxon_id": 352959,
@@ -17439,6 +17416,12 @@
                                                         "latinName": "Xepiculopsis",
                                                         "commonName": null,
                                                         "taxon_id": 417693,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Memnoniella",
+                                                        "commonName": null,
+                                                        "taxon_id": 328152,
                                                         "keys": []
                                                     },
                                                     {
@@ -17526,15 +17509,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Nothoeucasphaeria",
-                                                        "commonName": null,
-                                                        "taxon_id": 1560425,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Catenomargarita",
                                                         "commonName": null,
                                                         "taxon_id": 1560386,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Nothoeucasphaeria",
+                                                        "commonName": null,
+                                                        "taxon_id": 1560425,
                                                         "keys": []
                                                     }
                                                 ]
@@ -18096,9 +18079,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Phragmodiaporthe",
+                                                        "latinName": "Hypophloeda",
                                                         "commonName": null,
-                                                        "taxon_id": 1025147,
+                                                        "taxon_id": 1223134,
                                                         "keys": []
                                                     },
                                                     {
@@ -18108,9 +18091,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Hypophloeda",
+                                                        "latinName": "Phragmodiaporthe",
                                                         "commonName": null,
-                                                        "taxon_id": 1223134,
+                                                        "taxon_id": 1025147,
                                                         "keys": []
                                                     }
                                                 ]
@@ -18756,7 +18739,7 @@
                                                 "title": "A bibliography of Podospora and Schizothecium, a key to the species, and a description of",
                                                 "locale": "Global",
                                                 "authors": [
-                                                    "Francesco Doveri"
+                                                    "Doveri, Francesco"
                                                 ],
                                                 "url": "https://www.pilzforum.eu/attachment/59858-pdm-29a-podospora-pdf/",
                                                 "language": "en",
@@ -19048,51 +19031,27 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Floropilus",
+                                                        "latinName": "Achaetomiella",
                                                         "commonName": null,
-                                                        "taxon_id": 1536014,
+                                                        "taxon_id": 1535906,
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Microthielavia",
+                                                        "latinName": "Pseudothielavia",
                                                         "commonName": null,
-                                                        "taxon_id": 1536039,
+                                                        "taxon_id": 1360835,
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Allobotryotrichum",
+                                                        "latinName": "Guanomyces",
                                                         "commonName": null,
-                                                        "taxon_id": 1535535,
+                                                        "taxon_id": 1432308,
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Allocanariomyces",
+                                                        "latinName": "Pseudohumicola",
                                                         "commonName": null,
-                                                        "taxon_id": 1535537,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Aporothielavia",
-                                                        "commonName": null,
-                                                        "taxon_id": 1535541,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Chrysocorona",
-                                                        "commonName": null,
-                                                        "taxon_id": 1535542,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Hyalosphaerella",
-                                                        "commonName": null,
-                                                        "taxon_id": 1535543,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Parathielavia",
-                                                        "commonName": null,
-                                                        "taxon_id": 1535544,
+                                                        "taxon_id": 1430814,
                                                         "keys": []
                                                     },
                                                     {
@@ -19123,6 +19082,30 @@
                                                         "latinName": "Chrysanthotrichum",
                                                         "commonName": null,
                                                         "taxon_id": 1535552,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Thermothielavioides",
+                                                        "commonName": null,
+                                                        "taxon_id": 1535553,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Madurella",
+                                                        "commonName": null,
+                                                        "taxon_id": 1535554,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Stolonocarpus",
+                                                        "commonName": null,
+                                                        "taxon_id": 1535555,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Batnamyces",
+                                                        "commonName": null,
+                                                        "taxon_id": 1535556,
                                                         "keys": []
                                                     }
                                                 ]
@@ -19480,15 +19463,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Serenomyces",
-                                                        "commonName": null,
-                                                        "taxon_id": 1036712,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Cocoicola",
                                                         "commonName": null,
                                                         "taxon_id": 1027480,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Serenomyces",
+                                                        "commonName": null,
+                                                        "taxon_id": 1036712,
                                                         "keys": []
                                                     }
                                                 ]
@@ -19630,15 +19613,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Dictyoarthrinium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1119087,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Rhinocephalum",
                                                         "commonName": null,
                                                         "taxon_id": 1015709,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Dictyoarthrinium",
+                                                        "commonName": null,
+                                                        "taxon_id": 1119087,
                                                         "keys": []
                                                     }
                                                 ]
@@ -19794,12 +19777,6 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Beltraniella",
-                                                        "commonName": null,
-                                                        "taxon_id": 353393,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Hemibeltrania",
                                                         "commonName": null,
                                                         "taxon_id": 374797,
@@ -19809,6 +19786,12 @@
                                                         "latinName": "Subramaniomyces",
                                                         "commonName": null,
                                                         "taxon_id": 375232,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Beltraniella",
+                                                        "commonName": null,
+                                                        "taxon_id": 353393,
                                                         "keys": []
                                                     },
                                                     {
@@ -20077,6 +20060,12 @@
                                                         "keys": []
                                                     },
                                                     {
+                                                        "latinName": "Hawksworthiomyces",
+                                                        "commonName": null,
+                                                        "taxon_id": 1436014,
+                                                        "keys": []
+                                                    },
+                                                    {
                                                         "latinName": "Dryadomyces",
                                                         "commonName": null,
                                                         "taxon_id": 1504927,
@@ -20086,12 +20075,6 @@
                                                         "latinName": "Hausneria",
                                                         "commonName": null,
                                                         "taxon_id": 1560170,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Hawksworthiomyces",
-                                                        "commonName": null,
-                                                        "taxon_id": 1436014,
                                                         "keys": []
                                                     }
                                                 ]
@@ -20252,15 +20235,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Lophotrichus",
-                                                        "commonName": null,
-                                                        "taxon_id": 971543,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Stysanus",
                                                         "commonName": null,
                                                         "taxon_id": 1018047,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Lophotrichus",
+                                                        "commonName": null,
+                                                        "taxon_id": 971543,
                                                         "keys": []
                                                     }
                                                 ]
@@ -20677,15 +20660,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Irenopsis",
-                                                        "commonName": null,
-                                                        "taxon_id": 353101,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Appendiculella",
                                                         "commonName": null,
                                                         "taxon_id": 354176,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Irenopsis",
+                                                        "commonName": null,
+                                                        "taxon_id": 353101,
                                                         "keys": []
                                                     },
                                                     {
@@ -21090,9 +21073,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Cyanoannulus",
+                                                        "latinName": "Ascitendus",
                                                         "commonName": null,
-                                                        "taxon_id": 1151349,
+                                                        "taxon_id": 1113176,
                                                         "keys": []
                                                     },
                                                     {
@@ -21102,9 +21085,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Ascitendus",
+                                                        "latinName": "Cyanoannulus",
                                                         "commonName": null,
-                                                        "taxon_id": 1113176,
+                                                        "taxon_id": 1151349,
                                                         "keys": []
                                                     },
                                                     {
@@ -23981,15 +23964,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Hainesia",
-                                                        "commonName": null,
-                                                        "taxon_id": 1430731,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Synchaetomella",
                                                         "commonName": null,
                                                         "taxon_id": 1518308,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Hainesia",
+                                                        "commonName": null,
+                                                        "taxon_id": 1430731,
                                                         "keys": []
                                                     },
                                                     {
@@ -24231,12 +24214,6 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Phacellium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1005728,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Chuppomyces",
                                                         "commonName": null,
                                                         "taxon_id": 1096269,
@@ -24258,6 +24235,12 @@
                                                         "latinName": "Microcyclus",
                                                         "commonName": null,
                                                         "taxon_id": 374906,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Phacellium",
+                                                        "commonName": null,
+                                                        "taxon_id": 1005728,
                                                         "keys": []
                                                     },
                                                     {
@@ -24465,20 +24448,6 @@
                                                 ]
                                             },
                                             {
-                                                "latinName": "Piedraiaceae",
-                                                "commonName": null,
-                                                "taxon_id": 537840,
-                                                "keys": [],
-                                                "genus": [
-                                                    {
-                                                        "latinName": "Piedraia",
-                                                        "commonName": null,
-                                                        "taxon_id": 537841,
-                                                        "keys": []
-                                                    }
-                                                ]
-                                            },
-                                            {
                                                 "latinName": "Extremaceae",
                                                 "commonName": null,
                                                 "taxon_id": 791592,
@@ -24502,6 +24471,20 @@
                                                         "latinName": "Phaeothecoidiella",
                                                         "commonName": null,
                                                         "taxon_id": 1257453,
+                                                        "keys": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "latinName": "Piedraiaceae",
+                                                "commonName": null,
+                                                "taxon_id": 537840,
+                                                "keys": [],
+                                                "genus": [
+                                                    {
+                                                        "latinName": "Piedraia",
+                                                        "commonName": null,
+                                                        "taxon_id": 537841,
                                                         "keys": []
                                                     }
                                                 ]
@@ -25151,15 +25134,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Tremateia",
-                                                        "commonName": null,
-                                                        "taxon_id": 1238276,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Neokalmusia",
                                                         "commonName": null,
                                                         "taxon_id": 1362078,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Tremateia",
+                                                        "commonName": null,
+                                                        "taxon_id": 1238276,
                                                         "keys": []
                                                     },
                                                     {
@@ -25169,15 +25152,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Neptunomyces",
-                                                        "commonName": null,
-                                                        "taxon_id": 1560285,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Deniquelata",
                                                         "commonName": null,
                                                         "taxon_id": 1560390,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Neptunomyces",
+                                                        "commonName": null,
+                                                        "taxon_id": 1560285,
                                                         "keys": []
                                                     }
                                                 ]
@@ -26319,15 +26302,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Skoteinospora",
-                                                        "commonName": null,
-                                                        "taxon_id": 1246843,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Rasutoria",
                                                         "commonName": null,
                                                         "taxon_id": 1188373,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Skoteinospora",
+                                                        "commonName": null,
+                                                        "taxon_id": 1246843,
                                                         "keys": []
                                                     }
                                                 ]
@@ -26486,20 +26469,8 @@
                                                 "taxon_id": 327983,
                                                 "keys": [
                                                     {
-                                                        "title": "Key to hysterioid fungi on bark and wood in Scandinavia",
-                                                        "locale": "Scandanavian",
-                                                        "authors": [
-                                                            "Nord\u00e9n, Bj\u00f6rn",
-                                                            "Andreasen, Mathias"
-                                                        ],
-                                                        "url": "https://www.researchgate.net/publication/351561550_Key_to_hysterioid_fungi_on_bark_and_wood_in_Scandinavia",
-                                                        "language": "en",
-                                                        "type": "paper",
-                                                        "country_code": "no"
-                                                    },
-                                                    {
                                                         "title": "A new genus and three new species of hysteriaceous ascomycetes from the semiarid region of Brazil",
-                                                        "locale": "Brazil",
+                                                        "locale": "South America",
                                                         "authors": [
                                                             "Davi",
                                                             "FERNANDO PASCHOLATI GUSM\u00c3O,  LU\u00cdS",
@@ -26509,6 +26480,18 @@
                                                         "language": "en",
                                                         "type": ".pdf",
                                                         "country_code": "br"
+                                                    },
+                                                    {
+                                                        "title": "Key to hysterioid fungi on bark and wood in Scandinavia",
+                                                        "locale": "Northern Europe",
+                                                        "authors": [
+                                                            "Nord\u00e9n, Bj\u00f6rn",
+                                                            "Andreasen, Mathias"
+                                                        ],
+                                                        "url": "https://www.researchgate.net/publication/351561550_Key_to_hysterioid_fungi_on_bark_and_wood_in_Scandinavia",
+                                                        "language": "en",
+                                                        "type": "paper",
+                                                        "country_code": "no"
                                                     }
                                                 ],
                                                 "genus": [
@@ -26567,6 +26550,18 @@
                                                         "keys": []
                                                     },
                                                     {
+                                                        "latinName": "Ostreichnion",
+                                                        "commonName": null,
+                                                        "taxon_id": 1028013,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Graphyllium",
+                                                        "commonName": null,
+                                                        "taxon_id": 1304409,
+                                                        "keys": []
+                                                    },
+                                                    {
                                                         "latinName": "Ericboehmia",
                                                         "commonName": null,
                                                         "taxon_id": 1236561,
@@ -26585,18 +26580,6 @@
                                                                 "country_code": "ww"
                                                             }
                                                         ]
-                                                    },
-                                                    {
-                                                        "latinName": "Ostreichnion",
-                                                        "commonName": null,
-                                                        "taxon_id": 1028013,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Graphyllium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1304409,
-                                                        "keys": []
                                                     }
                                                 ]
                                             }
@@ -27919,9 +27902,9 @@
                                                         "keys": [
                                                             {
                                                                 "title": "FSC Toolkit: Geoglossaceae",
-                                                                "locale": "United Kingdom",
+                                                                "locale": "Western Europe",
                                                                 "authors": [
-                                                                    "Malcolm Greaves"
+                                                                    "Greaves, Malcolm"
                                                                 ],
                                                                 "url": "https://myfg.org.uk/tombiovis/tombiovis-1.10.0/identikit/geoglossum.html",
                                                                 "language": "en",
@@ -28398,15 +28381,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Reichlingia",
-                                                        "commonName": null,
-                                                        "taxon_id": 903400,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Pachnolepia",
                                                         "commonName": null,
                                                         "taxon_id": 1026491,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Reichlingia",
+                                                        "commonName": null,
+                                                        "taxon_id": 903400,
                                                         "keys": []
                                                     },
                                                     {
@@ -28458,15 +28441,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Allarthothelium",
-                                                        "commonName": null,
-                                                        "taxon_id": 863814,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Myriostigma",
                                                         "commonName": null,
                                                         "taxon_id": 923441,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Allarthothelium",
+                                                        "commonName": null,
+                                                        "taxon_id": 863814,
                                                         "keys": []
                                                     },
                                                     {
@@ -28960,15 +28943,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Staurothele",
-                                                        "commonName": "Wart Lichens",
-                                                        "taxon_id": 174843,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Botryolepraria",
                                                         "commonName": null,
                                                         "taxon_id": 462486,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Staurothele",
+                                                        "commonName": "Wart Lichens",
+                                                        "taxon_id": 174843,
                                                         "keys": []
                                                     },
                                                     {
@@ -29284,12 +29267,6 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Ascospirella",
-                                                        "commonName": null,
-                                                        "taxon_id": 1148437,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Rasamsonia",
                                                         "commonName": null,
                                                         "taxon_id": 1408922,
@@ -29305,6 +29282,12 @@
                                                         "latinName": "Sagenomella",
                                                         "commonName": null,
                                                         "taxon_id": 1408924,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Ascospirella",
+                                                        "commonName": null,
+                                                        "taxon_id": 1148437,
                                                         "keys": []
                                                     },
                                                     {
@@ -31329,7 +31312,19 @@
                         "latinName": "Mucoromycota",
                         "commonName": null,
                         "taxon_id": 1094433,
-                        "keys": [],
+                        "keys": [
+                            {
+                                "title": "IDENTIFICATION OF MOULDS (MOLDS)",
+                                "locale": "Global",
+                                "authors": [
+                                    "Malloch, David"
+                                ],
+                                "url": "http://website.nbm-mnb.ca/mycologywebpages/Moulds/Identification.html#Dichotomous%20keys",
+                                "language": "en",
+                                "type": "url",
+                                "country_code": "ww"
+                            }
+                        ],
                         "class": [
                             {
                                 "latinName": "Mucoromycetes",
@@ -31480,7 +31475,7 @@
                                                                 "title": "Pilobolus",
                                                                 "locale": "Global",
                                                                 "authors": [
-                                                                    "Malcolm Greaves"
+                                                                    "Greaves, Malcolm"
                                                                 ],
                                                                 "url": "https://www.myfg.org.uk/pilobolus_update2.pdf",
                                                                 "language": "en",
@@ -31947,15 +31942,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Podila",
-                                                        "commonName": null,
-                                                        "taxon_id": 1556615,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Entomortierella",
                                                         "commonName": null,
                                                         "taxon_id": 1506613,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Podila",
+                                                        "commonName": null,
+                                                        "taxon_id": 1556615,
                                                         "keys": []
                                                     },
                                                     {
@@ -31965,15 +31960,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Bonitomyces",
-                                                        "commonName": null,
-                                                        "taxon_id": 1560419,
-                                                        "keys": []
-                                                    },
-                                                    {
                                                         "latinName": "Aquamortierella",
                                                         "commonName": null,
                                                         "taxon_id": 1402184,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Bonitomyces",
+                                                        "commonName": null,
+                                                        "taxon_id": 1560419,
                                                         "keys": []
                                                     }
                                                 ]
@@ -32033,26 +32028,6 @@
                                                 ]
                                             },
                                             {
-                                                "latinName": "Cochlonemataceae",
-                                                "commonName": null,
-                                                "taxon_id": 464419,
-                                                "keys": [],
-                                                "genus": [
-                                                    {
-                                                        "latinName": "Amoebophilus",
-                                                        "commonName": null,
-                                                        "taxon_id": 464420,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Cochlonema",
-                                                        "commonName": null,
-                                                        "taxon_id": 508414,
-                                                        "keys": []
-                                                    }
-                                                ]
-                                            },
-                                            {
                                                 "latinName": "Piptocephalidaceae",
                                                 "commonName": null,
                                                 "taxon_id": 461255,
@@ -32074,6 +32049,26 @@
                                                         "latinName": "Kuzuhaea",
                                                         "commonName": null,
                                                         "taxon_id": 461252,
+                                                        "keys": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "latinName": "Cochlonemataceae",
+                                                "commonName": null,
+                                                "taxon_id": 464419,
+                                                "keys": [],
+                                                "genus": [
+                                                    {
+                                                        "latinName": "Amoebophilus",
+                                                        "commonName": null,
+                                                        "taxon_id": 464420,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Cochlonema",
+                                                        "commonName": null,
+                                                        "taxon_id": 508414,
                                                         "keys": []
                                                     }
                                                 ]
@@ -32154,9 +32149,9 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Genistellospora",
+                                                        "latinName": "Coleopteromyces",
                                                         "commonName": null,
-                                                        "taxon_id": 353219,
+                                                        "taxon_id": 337702,
                                                         "keys": []
                                                     },
                                                     {
@@ -32166,15 +32161,15 @@
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Simuliomyces",
+                                                        "latinName": "Genistellospora",
                                                         "commonName": null,
-                                                        "taxon_id": 352536,
+                                                        "taxon_id": 353219,
                                                         "keys": []
                                                     },
                                                     {
-                                                        "latinName": "Coleopteromyces",
+                                                        "latinName": "Simuliomyces",
                                                         "commonName": null,
-                                                        "taxon_id": 337702,
+                                                        "taxon_id": 352536,
                                                         "keys": []
                                                     },
                                                     {
@@ -32531,6 +32526,12 @@
                                                 "keys": [],
                                                 "genus": [
                                                     {
+                                                        "latinName": "Fimicolochytrium",
+                                                        "commonName": null,
+                                                        "taxon_id": 488505,
+                                                        "keys": []
+                                                    },
+                                                    {
                                                         "latinName": "Geranomyces",
                                                         "commonName": null,
                                                         "taxon_id": 502445,
@@ -32540,12 +32541,6 @@
                                                         "latinName": "Powellomyces",
                                                         "commonName": null,
                                                         "taxon_id": 502446,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Fimicolochytrium",
-                                                        "commonName": null,
-                                                        "taxon_id": 488505,
                                                         "keys": []
                                                     }
                                                 ]
@@ -33159,20 +33154,6 @@
                                         "keys": [],
                                         "family": [
                                             {
-                                                "latinName": "Geosiphonaceae",
-                                                "commonName": null,
-                                                "taxon_id": 484237,
-                                                "keys": [],
-                                                "genus": [
-                                                    {
-                                                        "latinName": "Geosiphon",
-                                                        "commonName": null,
-                                                        "taxon_id": 484238,
-                                                        "keys": []
-                                                    }
-                                                ]
-                                            },
-                                            {
                                                 "latinName": "Ambisporaceae",
                                                 "commonName": null,
                                                 "taxon_id": 353328,
@@ -33202,6 +33183,20 @@
                                                         "latinName": "Archaeosporites",
                                                         "commonName": null,
                                                         "taxon_id": 1536362,
+                                                        "keys": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "latinName": "Geosiphonaceae",
+                                                "commonName": null,
+                                                "taxon_id": 484237,
+                                                "keys": [],
+                                                "genus": [
+                                                    {
+                                                        "latinName": "Geosiphon",
+                                                        "commonName": null,
+                                                        "taxon_id": 484238,
                                                         "keys": []
                                                     }
                                                 ]
@@ -33543,62 +33538,6 @@
                         "class": []
                     },
                     {
-                        "latinName": "Aphelidiomycota",
-                        "commonName": null,
-                        "taxon_id": 1094446,
-                        "keys": [],
-                        "class": [
-                            {
-                                "latinName": "Aphelidea",
-                                "commonName": null,
-                                "taxon_id": 1186437,
-                                "keys": [],
-                                "order": [
-                                    {
-                                        "latinName": "Aphelidida",
-                                        "commonName": null,
-                                        "taxon_id": 1186438,
-                                        "keys": [],
-                                        "family": [
-                                            {
-                                                "latinName": "Aphelididae",
-                                                "commonName": null,
-                                                "taxon_id": 1186439,
-                                                "keys": [],
-                                                "genus": [
-                                                    {
-                                                        "latinName": "Paraphelidium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1276228,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Amoeboaphelidium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1276231,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Pseudaphelidium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1276234,
-                                                        "keys": []
-                                                    },
-                                                    {
-                                                        "latinName": "Aphelidium",
-                                                        "commonName": null,
-                                                        "taxon_id": 1176958,
-                                                        "keys": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
                         "latinName": "Rozellomycota",
                         "commonName": null,
                         "taxon_id": 1094447,
@@ -33667,6 +33606,62 @@
                                                         "latinName": "Calcarisporiella",
                                                         "commonName": null,
                                                         "taxon_id": 1536329,
+                                                        "keys": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "latinName": "Aphelidiomycota",
+                        "commonName": null,
+                        "taxon_id": 1094446,
+                        "keys": [],
+                        "class": [
+                            {
+                                "latinName": "Aphelidea",
+                                "commonName": null,
+                                "taxon_id": 1186437,
+                                "keys": [],
+                                "order": [
+                                    {
+                                        "latinName": "Aphelidida",
+                                        "commonName": null,
+                                        "taxon_id": 1186438,
+                                        "keys": [],
+                                        "family": [
+                                            {
+                                                "latinName": "Aphelididae",
+                                                "commonName": null,
+                                                "taxon_id": 1186439,
+                                                "keys": [],
+                                                "genus": [
+                                                    {
+                                                        "latinName": "Aphelidium",
+                                                        "commonName": null,
+                                                        "taxon_id": 1176958,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Paraphelidium",
+                                                        "commonName": null,
+                                                        "taxon_id": 1276228,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Amoeboaphelidium",
+                                                        "commonName": null,
+                                                        "taxon_id": 1276231,
+                                                        "keys": []
+                                                    },
+                                                    {
+                                                        "latinName": "Pseudaphelidium",
+                                                        "commonName": null,
+                                                        "taxon_id": 1276234,
                                                         "keys": []
                                                     }
                                                 ]
@@ -33964,9 +33959,9 @@
                                         "keys": [
                                             {
                                                 "title": "Trichiaceae (Trichiidae)",
-                                                "locale": "Norway",
+                                                "locale": "Northern Europe",
                                                 "authors": [
-                                                    "Edvin W. Johannesen"
+                                                    "Johannesen, Edvin W."
                                                 ],
                                                 "url": "https://www.artsdatabanken.no/Pages/342315/",
                                                 "language": "no",
@@ -34162,9 +34157,9 @@
                                                 "keys": [
                                                     {
                                                         "title": "Haglslim Lamproderma Rostaf.",
-                                                        "locale": "Norway",
+                                                        "locale": "Northern Europe",
                                                         "authors": [
-                                                            "Edvin W. Johannesen"
+                                                            "Johannesen, Edvin W."
                                                         ],
                                                         "url": "Lamproderma",
                                                         "language": "no",
