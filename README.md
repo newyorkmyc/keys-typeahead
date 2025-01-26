@@ -3,15 +3,34 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Aggregating links to fungal keys for the NYMS website.
+# Aggregating links to fungal keys for the NYMS website.
 
-To contribute any fungal keys please enter them [here](https://docs.google.com/spreadsheets/d/1kmjDvNiSI5lf99F5wE-nCSKwRLOtvO-rwj_xwGERzfg/edit?usp=sharing)
+## How to contribute to the website
+To contribute any fungal keys please enter them on our  [Google Sheets Here](https://docs.google.com/spreadsheets/d/1pPqUs63co3WlyIGs16FznQdhtlXdJ8g2nJSt_N5fmIE/edit?gid=0#gid=0)
+
+You will only have access to the `Enter Data Here` sheet. After you are done entering your data, open a [New Issue](https://github.com/newyorkmyc/keys-typeahead/issues) here on github and choose the 'Request Key Review' from the template option. Please populate the template and someone from the NYMS team will review and merge the data in.
+
+Here is an overview of the columns
+| Column Header 	| Description                                                                        	| Input type 	| Data Rule 	|
+|---------------	|------------------------------------------------------------------------------------	|------------	|-----------	|
+| inat_taxon    	| Name as seen on inaturalist.org                                                    	| string     	|           	|
+| Title         	| Title of the paper, website and or key to species                                  	| string     	|           	|
+| locale        	| What part of the world, this key covers                                            	| dropdown    | 1 choice    |
+| authors       	| Name of the author(s) who wrote the key                                            	| string     	|           	|
+| url           	| Link to the key                                                                    	| url        	| url       	|
+| language      	| Language the key appears in using a 2 letter country code. (e.g. `en` for English) 	| string     	| 2 letters 	|
+| type          	| Dropdown to select the type of key, .pdf, .doc, url, paper or other                	| dropdown   	| 1 choice  	|
+| country code  	| 2 letter country code                                                              	| string     	| 2 letters 	|
+| country       	| Country name                                                                       	| string     	|           	|
+
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+These instructions will help you clone a copy of the project, and get it up and running on
+your local machine for development and testing purposes.
+
+(_See deployment
+for notes on deploying the project on a live system._)
 
 ### Prerequisites
 
@@ -21,20 +40,21 @@ Requirements for the software and other tools to build, test and push
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development
-environment running
+A step by step installation guide
 
 1. Download or pull the repo into your local computer
-
-2. Navigate to the folder location in the command line and start a node server with:
-```
-npm install --global http-server
-```
-3. Visit your browser at http://localhost:8080/ to see the UI
+   1. `git clone https://github.com/newyorkmyc/keys-typeahead.git`
+1. Navigate to the repo folder location on your local computer and install the npm packages
+   1. `npm install`
+1. Navigate to the folder location in the command line and start a node server with:
+   1.`npm install --global http-server`
+1. To start the server run the following command:
+   1. `npx http-server`
+1. Visit your browser at http://localhost:8080/ to see the UI
 
 ### Current UI Design
 
-![image](https://github.com/user-attachments/assets/31d4578e-fbe9-44a8-a9b0-2dec9cce8548)
+![image](https://github.com/user-attachments/assets/9defc768-c56c-4a13-9abe-966f70bc2f78)
 
 ### How to use the search
 
