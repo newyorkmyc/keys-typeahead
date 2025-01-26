@@ -22,7 +22,6 @@ async function loadJSON() {
 
         // Parse the JSON file into a JavaScript object
         data = await response.json();
-        console.log({ data })
         // Call performSearch to display all results on page load
         performSearch();
     } catch (error) {
@@ -37,7 +36,6 @@ function getFlagEmoji(countryCode) {
         .toUpperCase()
         .split('')
         .map(char => {
-            console.log({countryCode, char:  char.charCodeAt(), charAt: 127397 + char.charCodeAt()})
             return 127397 + char.charCodeAt()});
 
     return String.fromCodePoint(...codePoints);
@@ -51,7 +49,6 @@ function highlightMatch(text, searchTerm) {
 }
 
 function displayResults(results, searchTerm) {
-    console.log({results})
 
     const resultsDiv = document.querySelector('.search-results-container');
     resultsDiv.innerHTML = '';  // Clear previous results
