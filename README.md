@@ -54,7 +54,7 @@ A step by step installation guide
 
 ### Current UI Design
 
-![image](https://github.com/user-attachments/assets/11abe17f-fe08-4527-805f-eb7043d1a03e)
+![image](https://github.com/user-attachments/assets/9defc768-c56c-4a13-9abe-966f70bc2f78)
 
 ### How to use the search
 
