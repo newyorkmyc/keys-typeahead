@@ -145,7 +145,7 @@ function countCountry(results) {
     const countryCounts = {};
 
     results.forEach(result => {
-        const country = result.country_code || 'Global';
+        const country = result.country || 'Global';
         if (countryCounts[country]) {
             countryCounts[country]++;
         } else {
@@ -167,7 +167,7 @@ function displayCountries(countryCounts) {
         const countryItem = document.createElement('li');
         countryItem.classList.add('menu-country--item')
 
-        countryItem.innerHTML = `[ ${ count } ] - ${ country }`;
+        countryItem.innerHTML = `<span>[ ${ count } ]</span><span> - ${ country }</span>`;
 
         // Add click event to populate search field and trigger search
         countryItem.addEventListener('click', (e) => {
