@@ -7,7 +7,8 @@ assignees: Elaniobro, mrozanoff, newyorkmyc
 
 ---
 
-Checklist 
--[ ] data is valid
+Checklist
+
+- [ ] data is valid
 - [ ] url does not already exist
 - [ ] country codes are valid
