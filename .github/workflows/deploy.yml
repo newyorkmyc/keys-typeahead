@@ -30,4 +30,4 @@ jobs:
           chmod 400 $HOME/.ssh/id_rsa
       - name: Upload to server ⬆️
         run: |
-          scp -i {{$HOME/.ssh/id_rsa}} ./fungi_taxonomy.json ./index.html ${{ secrets.SSH_USER }}@${{ secrets.NYMS_HOST }}:${{ secrets.NYMS_TARGET }}
+          scp -i {{$HOME/.ssh/id_rsa}} ./fungi_taxonomy.json ./index.html ./scripts.js ./style.css ${{ secrets.SSH_USER }}@${{ secrets.NYMS_HOST }}:${{ secrets.NYMS_TARGET }}
