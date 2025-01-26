@@ -12,7 +12,7 @@
 <body>
 
     <header>
-        <img class="logo" src="https://www.newyorkmyc.org/wp-content/uploads/2023/05/logo-NYMS-circle-svg.svg#316" />
+        <a href="//www.newyorkmyc.org" target="_self"><img class="logo" src="https://www.newyorkmyc.org/wp-content/uploads/2023/05/logo-NYMS-circle-svg.svg#316" /></a>
         <h1 class="title">Search For Fungus Key</h1>
         <div class="search--container">
             <div class="search">
@@ -20,23 +20,24 @@
                 <input class="search--input" placeholder="Search for Title, Author, Locale, or Taxon...">
             </div>
         </div>
-        <!-- <div>
-                        <input type="text" class="input--search" id="searchInput"
-                            placeholder="Search for Title, Author, Locale, or Taxon..." oninput="performSearch()" />
-                        <button id="clearButton" onclick="clearSelection()">Clear Selection</button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div> -->
+
+        <!--<div>
+            <input type="text" class="input--search" id="searchInput"
+                placeholder="Search for Title, Author, Locale, or Taxon..." oninput="performSearch()" />
+            <button id="clearButton" onclick="clearSelection()">Clear Selection</button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>-->
     </header>
 
     <main>
         <aside>
             <section class="menu menu-external" id="dynamicButtonsContainer">
                 <h3 class="menu--title">External Resources:</h3>
-                <a class="dynamic-link" id="dynamicLinkButton1">Dynamic Button 1 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                <a class="dynamic-link" id="dynamicLinkButton2">Dynamic Button 2 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a class="dynamic-link" id="dynamicLinkButton1"></a>
+                <a class="dynamic-link" id="dynamicLinkButton2"></a>
             </section>
             <section class="menu menu-country" id="countryList">
-                <h3 class="menu--title">Most Common Country</h3>
+                <h3 class="menu--title">Most Common Locale</h3>
                 <ul class="menu-country--list">
 
                 </ul>
