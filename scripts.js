@@ -30,7 +30,7 @@ async function loadJSON() {
 }
 
 function getFlagEmoji(countryCode) {
-    if(countryCode === 'global') return '🌎'
+    if(countryCode === 'ww') return '🌎'
 
     const codePoints = countryCode
         .toUpperCase()
@@ -61,7 +61,7 @@ function displayResults(results, searchTerm) {
             // Highlight search term in the title, latinName, and commonName
             const title = highlightMatch(result.title, searchTerm);
             const locale = highlightMatch(result.locale, searchTerm);
-            const authors = highlightMatch(result.authors.join(';<br/> '), searchTerm);
+            const authors = highlightMatch(result.authors.join('</li><li>'), searchTerm);
             const latinName = highlightMatch(result.latinName || '', searchTerm);
             const commonName = highlightMatch(result.commonName || '', searchTerm);
             const language = highlightMatch(result.language || '', searchTerm);
@@ -73,32 +73,34 @@ function displayResults(results, searchTerm) {
                     <h5 class='key-locale'><div class="key-taxon--label">Locale:</div> ${ locale }</h5>
                     <h2 class='key-title'><a class='key-title--link' href='${ result.url }' target='_blank'>${ title }</a></h2>
                     <div class='key-meta'>
-                        <div>
-                            <div class="key-taxon">
-                                <div class="key-taxon--label">Taxon:</div>
+                        <div class='key-taxon-left'>
+                          <div class='key-taxon key-taxon-grid'>
+                                <div class='key-taxon--label'>Latin Name:</div>
                                 ${ latinName }
                             </div>
-                            <div class="key-language">
-                                <div class="key-taxon--label">Language:</div>
+                            <div class='key-language key-taxon-grid'>
+                                <div class='key-taxon--label'>Language:</div>
                                 ${ language }
                             </div>
-                            <div class="key-country">
-                                <div class="key-taxon--label">Country:</div>
+                            <div class='key-country key-taxon-grid'>
+                                <div class='key-taxon--label'>Country:</div>
                                     ${ getFlagEmoji(countryCode) }
                             </div>
-                        </div>
-                        <div>
-                            <div class="key-common-name">
-                                <div class="key-taxon--label">Common Name:</div>
-                                ${ commonName ? commonName : 'N/A' }
-                            </div>
-                            <div class='key-taxon--type'>
+                            <div class='key-taxon--type key-taxon-grid'>
                                 <div class='key-taxon--label'>Key Type:</div>
                                 ${ type }
                             </div>
-                            <div class='key-taxon--authors'>
+                        </div>
+                        <div class='key-taxon-right'>
+                            <div class='key-common-name key-taxon-grid'>
+                                <div class='key-taxon--label key-taxon--label-sm'>Common Name:</div>
+                                ${ commonName ? commonName : 'N/A' }
+                            </div>
+                            <div class='key-taxon--authors key-taxon-grid'>
                                 <div class='key-taxon--label'>Authors:</div>
-                                ${ authors }
+                                <ul class='key-taxon--authors-list'>
+                                    <li>${ authors }</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -145,7 +147,7 @@ function countCountry(results) {
     const countryCounts = {};
 
     results.forEach(result => {
-        const country = result.country || 'Global';
+        const country = result.locale || 'Global';
         if (countryCounts[country]) {
             countryCounts[country]++;
         } else {
@@ -158,9 +160,9 @@ function countCountry(results) {
 
 // Function to display countries with their count
 function displayCountries(countryCounts) {
-    console.log({countryCounts})
     const countryList = document.querySelector('.menu-country--list');
     countryList.innerHTML = ''; // Clear previous country list
+    console.log({countryCounts})
 
     Object.keys(countryCounts).forEach(country => {
         const count = countryCounts[country];
@@ -168,7 +170,7 @@ function displayCountries(countryCounts) {
         const countryItem = document.createElement('li');
         countryItem.classList.add('menu-country--item')
 
-        countryItem.innerHTML = `<span>[ ${ count } ]</span><span> - ${ country }</span>`;
+        countryItem.innerHTML = `${ country } (${ count })`;
 
         // Add click event to populate search field and trigger search
         countryItem.addEventListener('click', (e) => {
@@ -196,6 +198,7 @@ function performSearch() {
 
     // Count locales and display them
     const countryCounts = countCountry(results);
+    console.log({results})
     displayCountries(countryCounts);
 }
 
@@ -216,8 +219,8 @@ function updateDynamicLink(results) {
         const topResultLatinName = results[0].latinName;
 
         // Update text for both buttons
-        dynamicLinkButton1.textContent = `View ${ topResultLatinName } iNaturalist Observations`;
-        dynamicLinkButton2.textContent = `View ${ topResultLatinName } iNaturalist Observations with DNA Barcode ITS`;
+        dynamicLinkButton1.innerHTML = `${ topResultLatinName } Observations <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+        dynamicLinkButton2.innerHTML = `${ topResultLatinName } Observations<br/>with DNA Barcode ITS <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
 
         // If taxon_id exists, construct the dynamic URLs
         if (topResultTaxonId) {
