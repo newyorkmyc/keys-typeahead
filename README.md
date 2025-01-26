@@ -8,20 +8,20 @@
 ## How to contribute to the website
 To contribute any fungal keys please enter them on our  [Google Sheets Here](https://docs.google.com/spreadsheets/d/1pPqUs63co3WlyIGs16FznQdhtlXdJ8g2nJSt_N5fmIE/edit?gid=0#gid=0)
 
-You will only have access to the Enter Data here sheet. After you are done entering your data, open an [issue]() here on github and choose the 'Request Key Review' from the template option. Please populate the template and someone from the NYMS team will review and merge the data in.
+You will only have access to the `Enter Data Here` sheet. After you are done entering your data, open a [New Issue](https://github.com/newyorkmyc/keys-typeahead/issues) here on github and choose the 'Request Key Review' from the template option. Please populate the template and someone from the NYMS team will review and merge the data in.
 
 Here is an overview of the columns
-| Column Header 	| Description                                                                        	| Input type 	|
-|---------------	|------------------------------------------------------------------------------------	|------------	|
-| inat_taxon    	| Name as seen on inaturalist.org                                                    	| string     	|
-| Title         	| Title of the paper, website and or key to species                                  	| string     	|
-| locale        	| What part of the world, this key covers                                            	| string     	|
-| authors       	| Name of the author(s) who wrote the key                                            	| string     	|
-| url           	| Link to the key                                                                    	| url        	|
-| language      	| Language the key appears in using a 2 letter country code. (e.g. `en` for English) 	| string     	|
-| type          	| Dropdown to select the type of key, `.pdf`, `.doc`, `url`, `paper` or `other`                	| dropdown   	|
-| country code  	| 2 letter country code                                                              	| string     	|
-| country       	| Country name                                                                       	| string     	|
+| Column Header 	| Description                                                                        	| Input type 	| Data Rule 	|
+|---------------	|------------------------------------------------------------------------------------	|------------	|-----------	|
+| inat_taxon    	| Name as seen on inaturalist.org                                                    	| string     	|           	|
+| Title         	| Title of the paper, website and or key to species                                  	| string     	|           	|
+| locale        	| What part of the world, this key covers                                            	| string     	|           	|
+| authors       	| Name of the author(s) who wrote the key                                            	| string     	|           	|
+| url           	| Link to the key                                                                    	| url        	| url       	|
+| language      	| Language the key appears in using a 2 letter country code. (e.g. `en` for English) 	| string     	| 2 letters 	|
+| type          	| Dropdown to select the type of key, .pdf, .doc, url, paper or other                	| dropdown   	| 1 choice  	|
+| country code  	| 2 letter country code                                                              	| string     	| 2 letters 	|
+| country       	| Country name                                                                       	| string     	|           	|
 
 
 ## Getting Started
