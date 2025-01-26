@@ -3,10 +3,28 @@ document.addEventListener('DOMContentLoaded', loadJSON);
 
 let data = {}
 const searchInput = document.querySelector('.search--input');
-const searchBtn = document.querySelector('.fa-search');
+const searchBtn = document.querySelector('.search--button');
+const searchIcon = document.querySelector('.fa-search');
 
-searchBtn.addEventListener("click", (e)=> clearSelection());
+searchBtn.addEventListener("click", (e)=> {
+    if(searchBtn.classList === 'active') {
+        console.log('search')
+        performSearch()
+    }else{
+        console.log('clear')
+        clearSearch()
+    }
 
+});
+// searchClear.addEventListener("click", (e)=> clearSearch());
+searchInput.addEventListener("keyup", ({key}) => {
+    if (key === "Enter") {
+        performSearch()
+        searchBtn.classList.add('active')
+        searchIcon.classList.remove('fa-search')
+        searchIcon.classList.add('fa-rectangle-xmark')
+    }
+})
 
 
 // Function to load the JSON file and store it in a variable
@@ -162,11 +180,9 @@ function countCountry(results) {
 function displayCountries(countryCounts) {
     const countryList = document.querySelector('.menu-country--list');
     countryList.innerHTML = ''; // Clear previous country list
-    console.log({countryCounts})
 
     Object.keys(countryCounts).forEach(country => {
         const count = countryCounts[country];
-        console.log({country})
         const countryItem = document.createElement('li');
         countryItem.classList.add('menu-country--item')
 
@@ -198,7 +214,6 @@ function performSearch() {
 
     // Count locales and display them
     const countryCounts = countCountry(results);
-    console.log({results})
     displayCountries(countryCounts);
 }
 
@@ -297,7 +312,10 @@ function exploreRandomKey() {
 }
 
 // Function to clear the search input
-function clearSelection() {
-    performSearch(); // Optionally, trigger search to clear results
+function clearSearch() {
+    performSearch()
     document.querySelector('.search--input').value = '';
+    searchBtn.classList.remove('active')
+    searchIcon.classList.remove('fa-rectangle-xmark')
+    searchIcon.classList.add('fa-search')
 }

@@ -114,7 +114,8 @@ header .title {
     width: 100%;
 }
 
-.search .fa-search {
+.search .fa-search,
+.search .fa-rectangle-xmark {
     position: absolute;
     top: 10px;
     left: auto;
