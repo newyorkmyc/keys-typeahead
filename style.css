@@ -164,19 +164,32 @@ article .key-title--link:hover {
 }
 article .key-meta {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
+    font-size: 14px;
 }
 
 article .key-taxon {}
+article .key-taxon-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
 
 article .key-taxon--label {
-    font-size: 12px;
+    font-size: 11px;
     color: #9999;
     display: inline-block;
 }
-
-article .key-authors {}
-
+article .key-taxon--label-sm {
+    display: inline-block;
+}
+article .key-authors--list {}
+article .key-taxon--authors-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    baseline-source: first;
+}
 article.search-result:hover {
     outline: 1px solid #000;
     /* border-top: 3px solid #e2f5be;
@@ -213,8 +226,6 @@ aside .menu-country--list {
 
 aside .menu-country--item {
     margin: 4px 0;
-    display: grid;
-    grid-template-columns: 25% 75%;
 }
 aside .menu-country--item:hover {
     background-color: #f4deba;
